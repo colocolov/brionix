@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
     <!-- подключение favicon -->
     <title>Brionix</title>
@@ -11,11 +12,83 @@
   <body>
     <div class="wrapper">
       @@include('_header.html')
+
+      <!-- категории + слайдер -->
+      <div class="tophead">
+        <div class="tophead__category">
+          <div class="container">
+            <ul class="category-top__list">
+              <li class="category-top__item">
+                <a href="#" class="category-top__link">
+                  <img src="images/icons/canister.svg" alt="Иконка масла" class="category-top__img" />Масла
+                </a>
+              </li>
+              <li class="category-top__item">
+                <a href="#" class="category-top__link">
+                  <img src="images/icons/pads.svg" alt="Иконка колодки" class="category-top__img" />
+                  Колодки
+                </a>
+              </li>
+              <li class="category-top__item">
+                <a href="#" class="category-top__link">
+                  <img src="images/icons/bulbs.svg" alt="Иконка лампочки" class="category-top__img" />
+                  Лампочки
+                </a>
+              </li>
+              <li class="category-top__item">
+                <a href="#" class="category-top__link">
+                  <img src="images/icons/wipers.svg" alt="Иконка дворника" class="category-top__img" />
+                  Дворники
+                </a>
+              </li>
+              <li class="category-top__item">
+                <a href="#" class="category-top__link">
+                  <img src="images/icons/antifreez.svg" alt="Иконка антифриза" class="category-top__img" />
+                  Антифриз
+                </a>
+              </li>
+              <li class="category-top__item">
+                <a href="#" class="category-top__link">
+                  <img src="images/icons/clamp.svg" alt="Иконка хомута" class="category-top__img" />
+                  Хомуты
+                </a>
+              </li>
+              <li class="category-top__item">
+                <a href="#" class="category-top__link">
+                  <img src="images/icons/filter.svg" alt="Иконка фильтра" class="category-top__img" />
+                  Фильтра
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container">
+          <div class="slider">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.tophead -->
+
+      <!-- основной контент -->
       <main class="main"></main>
-      <footer class="footer">11</footer>
+      <footer class="footer"></footer>
     </div>
 
     <!-- подключение скриптов -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

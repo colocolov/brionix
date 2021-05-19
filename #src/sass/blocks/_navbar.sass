@@ -1,6 +1,4 @@
 .navbar
-  // padding-top: 10px
-  // padding-bottom: 10px
   display: flex
   justify-content: space-between
   align-items: center
@@ -21,8 +19,8 @@
   &__item
     font-family: 'Raleway-Regular', sans-serif
     font-weight: 400
-    font-size: 16px
-    line-height: 20px
+    font-size: 13px
+    line-height: 26px
     color: $black
     &-lang
       margin-right: 5px
@@ -60,6 +58,8 @@
 .top
   padding: 18px 0
   background-color: $grey
+  border-top: 1px solid $bll
+  border-bottom: 1px solid $bll
   &__inner
     display: flex
     justify-content: space-between
@@ -81,6 +81,8 @@
       &::placeholder
         color: $bll
         @extend %podpisi
+      &:focus
+        border: 1px solid $red
     &-button
       position: absolute
       background-color: $red
@@ -89,10 +91,10 @@
       top: 0
       right: 0
       height: 100%
-      padding: 12px 18px
+      width: 75px
       border: none
       outline: none
-      @extend %podpisi
+      font-size: 12px
       cursor: pointer
   &__basket
     &-info
@@ -111,9 +113,9 @@
         height: 20px
     &-title
       @extend %text-title
-      font-size: 16px
+      line-height: 18px
     &-total
       font-family: 'Raleway-Medium', sans-serif
       font-weight: 400
-      font-size: 10px
+      font-size: 12px
       line-height: 14px
