@@ -1,0 +1,62 @@
+.category
+  background: $grey url(../images/icons/engine.svg) no-repeat center 15px
+  padding: 50px 0
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 25px
+  &__title
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 40px
+      height: 1px
+      background-color: $red
+  &__button
+    position: relative
+    background-color: $red
+    padding: 0 46px 0 32px
+    border-radius: 20px
+    @extend %text-title
+    font-weight: 700
+    color: $bgc
+    height: 56px
+    // width: 205px
+    &::before
+      content: ''
+      position: absolute
+      top: 22px
+      right: 34px
+      width: 8px
+      height: 12px
+      background: url(../images/icons/arrow-left-btn.svg) no-repeat 0 0
+  &__list
+    display: flex
+    // justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+  &__item
+    display: flex
+    align-items: center
+    width: 366px
+    height: 107px
+    background: $bgc
+    color: $bl
+    border-radius: 3px
+    padding-left: 25px
+    padding-right: 23px
+    margin-bottom: 20px
+    &:not(:nth-child(3n+3))
+      margin-right: 20px
+  &__item picture
+  &__image
+    height: 90px
+  &__link
+    margin-left: 55px
+    @extend %text-title
+    font-weight: 700
+    color: inherit
