@@ -1,8 +1,8 @@
 // слайдер на главной
-var reviewsSlider = new Swiper(".reviews-slider", {
+var reviewsSlider = new Swiper(".tophead-slider", {
   loop: true,
   autoplay: {
-    delay: 7000,
+    delay: 5000,
   },
   // If we need pagination
   pagination: {

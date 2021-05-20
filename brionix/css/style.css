@@ -424,8 +424,30 @@ input {
   line-height: 14px;
 }
 
+.tophead {
+  margin-bottom: 70px;
+}
+
 .tophead__category {
   border-bottom: 1px solid rgba(46, 46, 46, 0.5);
+}
+
+.tophead-slider__item {
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #354053;
+  border: 1px solid #354053;
 }
 
 .category-top__list {
@@ -447,7 +469,7 @@ input {
 }
 
 .category-top__link {
-  padding: 15px 24px;
+  padding: 14px 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -459,17 +481,16 @@ input {
   font-size: 18px;
   line-height: 20px;
   color: #2E2E2E;
-  text-transform: uppercase;
 }
 
 .category-top__link picture {
-  height: 20px;
+  height: 15px;
 }
 
 .category-top__img {
-  height: 20px;
+  height: 15px;
   display: inline-block;
-  margin-right: 7px;
+  margin-right: 6px;
 }
 
 .menu__link:hover {

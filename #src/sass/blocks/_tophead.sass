@@ -1,6 +1,20 @@
 .tophead
+  margin-bottom: 70px
   &__category
     border-bottom: 1px solid $bll
+  &-slider__item
+    border-radius: 0 0 10px 10px
+    overflow: hidden
+
+.swiper-pagination-bullet
+  width: 10px
+  height: 10px
+  background-color: transparent
+  border: 1px solid $bgc
+  opacity: 1
+  &-active
+    background: $bl
+    border: 1px solid $bl
 
 .category-top
   &__list
@@ -13,7 +27,7 @@
     &:last-child
       border-right: 1px solid $bll
   &__link
-    padding: 15px 24px
+    padding: 14px 18px
     display: flex
     align-items: center
     font-family: 'Raleway-Regular'
@@ -21,10 +35,10 @@
     font-size: 18px
     line-height: 20px
     color: $black
-    text-transform: uppercase
+    // text-transform: uppercase
   &__link picture
-    height: 20px
+    height: 15px
   &__img
-    height: 20px
+    height: 15px
     display: inline-block
-    margin-right: 7px
+    margin-right: 6px
