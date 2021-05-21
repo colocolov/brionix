@@ -16,6 +16,7 @@ let path = {
     css: source_folder + "/sass/style.sass",
     cssadd: source_folder + "/css/*.css",
     js: source_folder + "/js/main.js",
+    jsadd: [source_folder + "/js/*.js", "!" + source_folder + "/js/main.js"],
     images: source_folder + "/images/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.ttf",
   },
@@ -87,6 +88,7 @@ function css() {
     .pipe(browsersync.stream());
 }
 
+// копирование доп. стилей из src в готовый проект
 function cssadd() {
   return src(path.src.cssadd).pipe(dest(path.build.css));
 }
@@ -103,6 +105,11 @@ function js() {
     )
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream());
+}
+
+// копирование JS фалйов из src в готовый проект, кроме main.js
+function jsadd() {
+  return src(path.src.jsadd).pipe(dest(path.build.js)).pipe(browsersync.stream());
 }
 
 //--- конвертирование JPG в WEBP + копирование JPG в dist
@@ -171,10 +178,12 @@ function fonts() {
 }
 //---END
 
+// очистка папки с готовым проектом
 function cleanDist() {
   return del(path.clean);
 }
 
+// отслеживание файлов
 function watchFiles(params) {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.css], css);
@@ -182,7 +191,7 @@ function watchFiles(params) {
   gulp.watch([path.watch.images], images);
 }
 
-let build = gulp.series(gulp.parallel(css, cssadd, html, js, images));
+let build = gulp.series(gulp.parallel(css, cssadd, html, js, jsadd, images));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 let done = gulp.series(cleanDist, build, imagesConvert, fonts); // выгрузка в готовый проект
 

@@ -16,6 +16,9 @@
       background: url(../images/icons/phone-border.svg) no-repeat 0 0
       width: 20px
       height: 20px
+  &__list
+    display: flex
+    align-items: center
   &__item
     font-family: 'Raleway-Regular', sans-serif
     font-weight: 400
@@ -49,7 +52,7 @@
 
 .button
   padding: 10px 15px
-  &__registration
+  &--registration
     font-family: 'Raleway-Medium', sans-serif
     font-weight: 400
     background-color: $red
@@ -119,3 +122,31 @@
       font-weight: 400
       font-size: 12px
       line-height: 14px
+
+.category-top
+  border-bottom: 1px solid $bll
+  &__list
+    display: flex
+    // justify-content: space-between
+    align-items: center
+  &__item
+    cursor: pointer
+    border-left: 1px solid $bll
+    &:last-child
+      border-right: 1px solid $bll
+  &__link
+    padding: 14px 18px
+    display: flex
+    align-items: center
+    font-family: 'Raleway-Regular'
+    font-weight: 400
+    font-size: 18px
+    line-height: 20px
+    color: $black
+    // text-transform: uppercase
+  &__link picture
+    height: 15px
+  &__img
+    height: 15px
+    display: inline-block
+    margin-right: 6px
