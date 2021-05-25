@@ -266,7 +266,7 @@ input {
 }
 
 .navbar__phone {
-  padding-left: 25px;
+  padding-left: 30px;
   font-weight: 700;
 }
 
@@ -275,9 +275,9 @@ input {
   position: absolute;
   top: 5px;
   left: 0;
-  background: url(../images/icons/phone-border.svg) no-repeat 0 0;
-  width: 20px;
-  height: 20px;
+  background: url(../images/icons/icons.svg#phone-border) no-repeat 0 0;
+  width: 25px;
+  height: 25px;
 }
 
 .navbar__list {
@@ -324,6 +324,10 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.menu__item {
+  position: relative;
 }
 
 .menu__item:not(:last-child) {
@@ -443,9 +447,9 @@ input {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   left: 0;
-  background: url(../images/icons/cart-top.svg) no-repeat 0 0;
-  width: 20px;
-  height: 20px;
+  background: url(../images/icons/icons.svg#cart-top) no-repeat -2px 4px;
+  width: 25px;
+  height: 25px;
 }
 
 .top__basket-title {
@@ -529,7 +533,8 @@ input {
 }
 
 .category {
-  background: #F6F6F6 url(../images/icons/engine.svg) no-repeat center center;
+  background: #F6F6F6 url(../images/icons/icons.svg#engine) no-repeat center center;
+  background-size: cover;
   padding: 50px 0;
 }
 
@@ -573,11 +578,11 @@ input {
 .category__button::before {
   content: '';
   position: absolute;
-  top: 22px;
-  right: 34px;
-  width: 8px;
-  height: 12px;
-  background: url(../images/icons/arrow-left-btn.svg) no-repeat 0 0;
+  top: 23px;
+  right: 29px;
+  width: 15px;
+  height: 15px;
+  background: url(../images/icons/icons.svg#arrow-left-btn) no-repeat 0 0;
 }
 
 .category__list {
@@ -612,8 +617,20 @@ input {
   margin-right: 20px;
 }
 
+.category__item .category__img:nth-child(2) {
+  padding-right: 100px;
+}
+
+.category__img {
+  height: 85px;
+  width: 97px;
+}
+
 .category__image {
-  height: 90px;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .category__link {
@@ -622,40 +639,74 @@ input {
   color: inherit;
 }
 
-.menu__link:hover {
-  color: #354053;
-}
+@media (min-width: 992px) {
+  .menu__link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    left: auto;
+    background-color: #354053;
+    height: 2px;
+    bottom: -10px;
+    right: 0;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+  }
 
-.navbar__phone:hover {
-  color: #ED2228;
-}
+  .menu__link:hover {
+    color: #354053;
+  }
 
-.navbar__link:hover {
-  color: #354053;
-}
+  .menu__link:hover::before {
+    width: 100%;
+    right: auto;
+    left: 0;
+  }
 
-.category-top__link:hover {
-  color: #ffffff;
-}
+  .navbar__phone:hover {
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    color: #ED2228;
+  }
 
-.category-top__item:hover {
-  background-color: #ED2228;
-}
+  .navbar__link:hover {
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    color: #354053;
+  }
 
-.category__button:hover {
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  -webkit-filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
-}
+  .category-top__link:hover {
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    color: #ffffff;
+  }
 
-.category__item:hover {
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  background-color: #ED2228;
-  color: #ffffff;
-  -webkit-filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
+  .category-top__item:hover {
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    background-color: #ED2228;
+  }
+
+  .category__button:hover {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
+            filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
+  }
+
+  .category__item:hover {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: #ED2228;
+    color: #ffffff;
+    -webkit-filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
+            filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
+  }
 }
