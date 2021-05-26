@@ -1,0 +1,101 @@
+.favorites
+  margin-bottom: 100px
+  &__top
+    margin-bottom: 25px
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__nav
+    display: flex
+    align-items: center
+    &--left.swiper-button-prev
+      position: relative
+      height: 45px
+      width: 55px
+      color: $bgc
+      background-color: $red
+      border-radius: 25px
+    &--left
+      margin-right: 25px
+    &--right.swiper-button-next
+      position: relative
+      height: 45px
+      width: 55px
+      color: $bgc
+      background-color: $red
+      border-radius: 25px
+  &__content
+    display: flex
+    align-items: center
+    height: 400px
+    padding-left: 15px
+  &__item
+    box-sizing: border-box
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-end
+    width: 270px
+    height: 373px
+    margin-right: 20px
+    padding: 20px
+    border-radius: 5px
+    background-color: $grey
+    transition: all 0.3s
+  &__labels
+    position: absolute
+    top: 20px
+    left: 0
+  &__new
+    display: block
+    background-color: $bl
+    padding: 2px 10px
+    border-radius: 0px 5px 5px 0px
+    margin-bottom: 5px
+    color: $bgc
+  &__hit
+    background-color: $red
+    padding: 2px 10px
+    border-radius: 0px 5px 5px 0px
+    color: $bgc
+  &__image
+    width: 150px
+    margin-bottom: 20px
+    transition: all 1s
+  &__img
+    width: 100%
+    height: 100%
+  &__title
+    @extend %text-title
+    color: $black
+    text-align: center
+    transition: all 0.3s
+  &__cart
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 30px
+  &__price
+    @extend %text-title
+    font-size: 22px
+    color: $bl
+  &__button
+    transition: all 0.3s
+    // padding: 5px
+    border: 1px solid $red
+    border-radius: 5px
+    background: url('../images/icons/icons.svg#cart-top') no-repeat center center
+    width: 36px
+    height: 36px
+  &__basket
+    width: 25px
+    height: 25px
+
+.favorites__nav--left.swiper-button-prev::after
+  font-size: 17px
+  text-align: center
+.favorites__nav--right.swiper-button-next::after
+  font-size: 17px
+  text-align: center

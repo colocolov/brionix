@@ -31,7 +31,7 @@ var headerSlider = new Swiper(".tophead-slider", {
     loadPrevNext: false,
   },
   // переключение при клике на слайд
-  slideToClickedSlide: true,
+  // slideToClickedSlide: true,
   // отключение прокрутки при наведении мыши
   // on: {
   //   init() {
@@ -44,5 +44,18 @@ var headerSlider = new Swiper(".tophead-slider", {
   //     });
   //   },
   // },
+});
+//-----
+
+// слайдер популярных товаров
+var favoritesSlider = new Swiper(".favorites__content", {
+  speed: 800,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+    clickable: true,
+  },
+  autoHeight: true,
+  slidesPerView: 4.05,
 });
 //-----

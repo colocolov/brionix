@@ -46,6 +46,29 @@
     &__item
       &:hover
         transition: all 0.3s
+        transform: scale(1.02)
+        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15))
         background-color: $red
         color: $bgc
-        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15))
+
+  .favorites
+    &__item
+      &:hover
+        transition: all 0.3s
+        // transform: scale(1.01)
+        filter: drop-shadow(0px 4px 7px rgba(0, 0, 0, 0.15))
+        color: $red
+    &__image
+      &:hover
+        transition: all 1s
+        transform: scale(1.1)
+    &__title
+      &:hover
+        transition: all 0.3s
+        color: $red
+    &__button
+      &:hover
+        transition: all 0.3s
+        background: $red url('../images/icons/icons.svg#cart-white') no-repeat center center
+        width: 36px
+        height: 36px

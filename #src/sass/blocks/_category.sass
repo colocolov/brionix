@@ -2,6 +2,7 @@
   background: $grey url(../images/icons/icons.svg#engine) no-repeat center center
   background-size: cover
   padding: 50px 0
+  margin-bottom: 70px
   &__head
     display: flex
     justify-content: space-between
@@ -9,14 +10,6 @@
     margin-bottom: 25px
   &__title
     position: relative
-    &::before
-      content: ''
-      position: absolute
-      bottom: 0
-      left: 0
-      width: 40px
-      height: 1px
-      background-color: $red
   &__button
     position: relative
     background-color: $red
@@ -51,11 +44,9 @@
     padding-left: 25px
     padding-right: 23px
     margin-bottom: 20px
+    transition: all 0.3s
     &:not(:nth-child(3n+3))
       margin-right: 20px
-  &__item .category__img
-    &:nth-child(2)
-      padding-right: 100px
   &__img
     height: 85px
     width: 97px
