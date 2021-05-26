@@ -56,6 +56,18 @@ var favoritesSlider = new Swiper(".favorites__content", {
     clickable: true,
   },
   autoHeight: true,
-  slidesPerView: 4.05,
+  slidesPerView: 4.2,
+});
+//-----
+
+// слайдер брендов
+var headerSlider = new Swiper(".brends__slider", {
+  loop: true,
+  autoplay: {
+    delay: 3000,
+  },
+  speed: 800,
+  slidesPerView: 5,
+  spaceBetween: 20,
 });
 //-----
