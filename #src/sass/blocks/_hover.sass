@@ -39,10 +39,6 @@
         background-color: $red
 
   .category
-    &__button
-      &:hover
-        transition: all 0.3s
-        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15))
     &__item
       &:hover
         transition: all 0.3s
@@ -51,24 +47,52 @@
         background-color: $red
         color: $bgc
 
+  .link__button
+    &:hover
+      transition: all 0.3s
+      filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15))
+      &::before
+        transition: all 0.3s
+        right: 22px
+
   .favorites
     &__item
       &:hover
         transition: all 0.3s
         // transform: scale(1.01)
-        filter: drop-shadow(0px 4px 7px rgba(0, 0, 0, 0.15))
+        filter: drop-shadow(3px 3px 10px rgba(50, 50, 50, 0.15))
         color: $red
     &__image
       &:hover
         transition: all 1s
         transform: scale(1.1)
-    &__title
-      &:hover
-        transition: all 0.3s
-        color: $red
     &__button
       &:hover
         transition: all 0.3s
         background: $red url('../images/icons/icons.svg#cart-white') no-repeat center center
         width: 36px
         height: 36px
+  .favorites__item:hover .favorites__title, .favorites__item:hover .favorites__price
+    transition: all 0.3s
+    color: $red
+  .favorites__nav--left.swiper-button-prev:hover
+    transition: all 0.3s
+    filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.15))
+  .favorites__nav--right.swiper-button-next:hover
+    transition: all 0.3s
+    filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.15))
+
+  .news
+    &__item:hover .news__img
+      transition: all 1.5s
+      transform: scale(1.2)
+      // color: $red
+    &__link
+      &:hover
+        &::before
+          transition: all 0.3s
+          right: -20px
+    &__button
+      &:hover
+        &::before
+          right: 18px

@@ -1,13 +1,7 @@
 // слайдер на главной
 var headerSlider = new Swiper(".tophead-slider", {
-  // loop: true,
   autoplay: {
-    //пауза между прокруткой
     delay: 3000,
-    //закончить на последнем слайде
-    // stopOnLastSlide: false,
-    //отключить после ручного переключения
-    // disableOnInteraction: false,
   },
   //скорость переключения слайдов
   speed: 800,
@@ -30,20 +24,6 @@ var headerSlider = new Swiper(".tophead-slider", {
     loadOnTransitionStart: false,
     loadPrevNext: false,
   },
-  // переключение при клике на слайд
-  // slideToClickedSlide: true,
-  // отключение прокрутки при наведении мыши
-  // on: {
-  //   init() {
-  //     this.el.addEventListener("mouseenter", () => {
-  //       this.autoplay.stop();
-  //     });
-
-  //     this.el.addEventListener("mouseleave", () => {
-  //       this.autoplay.start();
-  //     });
-  //   },
-  // },
 });
 //-----
 

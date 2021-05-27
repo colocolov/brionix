@@ -1,0 +1,49 @@
+.news
+  margin-bottom: 100px
+  &__wrapper
+    display: flex
+    align-items: center
+  &__info
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-content: space-between
+    align-items: flex-start
+    height: 422px
+  &__heading
+  &__button
+    padding: 16px 50px 16px 32px
+    &::before
+      top: 23px
+      right: 25px
+  &__item
+    width: 271px
+    margin-left: 20px
+  &__image
+    height: 321px
+    border-radius: 5px
+    overflow: hidden
+    margin-bottom: 20px
+  &__img
+    transition: all 1s
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &__title
+    @extend %text-title
+    margin-bottom: 7px
+  &__link
+    @extend %label
+    font-size: 12px
+    line-height: 18px
+    color: $red
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 4px
+      right: -14px
+      width: 12px
+      height: 12px
+      background: url(../images/icons/icons.svg#arrow-left-link) no-repeat 0 0
+      transition: all 0.3s
