@@ -1,0 +1,80 @@
+.footer
+  &__content
+    background-color: $bl
+  &__wrapper
+    padding: 50px 0
+    display: flex
+    justify-content: space-between
+  &__item
+    &:not(:last-child)
+      margin-right: 63px
+  &__logo
+    display: block
+    width: 200px
+    margin-bottom: 50px
+  &__social
+    display: flex
+    align-items: center
+    &-item
+      &:not(:last-child)
+        margin-right: 10px
+    &-link
+      display: block
+      position: relative
+      width: 39px
+      height: 39px
+      border-radius: 10px
+      background-color: $grey
+      overflow: hidden
+      transition: all 0.3s
+      &::after
+        content: ''
+        position: absolute
+        top: 9px
+        right: 4px
+        // left: 0
+        width: 30px
+        height: 30px
+        transition: all 0.3s
+      &--facebook
+        &::after
+          background: url(../images/icons/icons.svg#facebook-dark) no-repeat 0 0
+      &--instagram
+        &::after
+          background: url(../images/icons/icons.svg#instagram-dark) no-repeat 0 0
+      &--viber
+        &::after
+          background: url(../images/icons/icons.svg#viber-dark) no-repeat 0 0
+
+  &__heading
+    font-size: 24px
+    line-height: 28px
+    color: $bgc
+    margin-bottom: 20px
+  &__list
+    &-item
+      display: flex
+      align-items: center
+      &:not(:last-child)
+        margin-bottom: 10px
+    &-icon
+      width: 25px
+      height: 25px
+      margin-right: 5px
+  &__link
+    font-family: 'Raleway-Regular', sans-serif
+    font-weight: 400
+    font-size: 18px
+    line-height: 24px
+    color: $grey
+    transition: all 0.3s
+    &-phone
+      font-family: 'Raleway-Bold', sans-serif
+      font-weight: 700
+    &-hour
+      font-size: 16px
+  &__copyright-text
+    text-align: center
+    padding: 20px 0px
+    @extend %text
+    color: rgba(53, 64, 83, 0.5)
