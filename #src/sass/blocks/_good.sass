@@ -1,0 +1,124 @@
+.good
+  margin-bottom: 80px
+  &-wrapper
+    display: flex
+    align-items: start
+  &-photos
+    display: flex
+    align-items: flex-start
+    margin-right: 100px
+    &__big
+      position: relative
+      width: 400px
+      height: 400px
+      padding: 5px
+      margin-right: 25px
+      border-radius: 5px
+      border: 2px solid rgba(237, 34, 40, 0)
+      transition: all 0.5s
+      &:hover
+        border: 2px solid rgba(237, 34, 40, 1)
+    &__small
+      width: 100px
+      height: 100px
+      padding: 5px
+      margin-right: 25px
+      border-radius: 5px
+      border: 2px solid rgba(237, 34, 40, 0.1)
+      transition: all 0.5s
+      &:not(:last-child)
+        margin-bottom: 50px
+      &:hover
+        border: 2px solid rgba(237, 34, 40, 1)
+    &__img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      transition: all 0.5s
+      &:hover
+        transform: scale(1.02)
+  &-info
+    margin-right: 35px
+    &__title
+      margin-bottom: 20px
+      font-size: 38px
+      line-height: 42px
+    &__code
+      margin-right: 60px
+      font-weight: 400
+      font-size: 12px
+      line-height: 14px
+      color: $bll
+    &__brend
+      font-weight: 400
+      font-size: 12px
+      line-height: 14px
+      color: $bll
+      &-link
+        font-weight: 700
+        color: $red
+    &__exist
+      margin-top: 15px
+      margin-bottom: 30px
+      @extend %body
+      // font-size: 16px
+      // line-height: 14px
+      color: #48943C
+      position: relative
+      padding-left: 15px
+      &::before
+        content: ''
+        width: 7px
+        height: 7px
+        background-color: #48943C
+        border-radius: 50%
+        top: 9px
+        left: 0
+        position: absolute
+    &__price
+      margin-bottom: 40px
+      &-text
+        font-family: 'Raleway-Medium'
+        font-weight: 400
+        font-size: 10px
+        line-height: 1
+        color: $bll
+      &-num
+        font-family: 'Raleway-Bold'
+        font-weight: 700
+        font-size: 32px
+        line-height: 1
+        color: $black
+    &__btn
+      &-quantity
+        margin-right: 30px
+        text-align: center
+        border: none
+        width: 60px
+        height: 50px
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25)
+        border-radius: 5px
+        font-weight: 400
+        font-size: 22px
+        line-height: 24px
+        color: $bll
+        // background: #FFFFFF
+      &-cart
+        background: #ED2228
+        border-radius: 3px
+        height: 50px
+        padding-left: 55px
+        padding-right: 25px
+        &::before
+          content: ''
+          position: absolute
+          top: 14px
+          left: 20px
+          width: 30px
+          height: 30px
+          background: url(../images/icons/icons.svg#cart-white) no-repeat 0 0
+          transition: all 0.3s
+        &:hover
+          &::before
+            transition: all 1s
+            transform: scale(1.10)
