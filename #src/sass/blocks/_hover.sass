@@ -26,6 +26,17 @@
     &__link
       &:hover
         transition: all .3s
+        color: $red
+
+  .button--entry
+    &:hover
+      transition: all .3s
+      color: $red
+
+  .breadcrumbs
+    &-link
+      &:hover
+        transition: all .3s
         color: $bl
 
   .category-top
@@ -46,11 +57,16 @@
         filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15))
         background-color: $red
         color: $bgc
+    &__link
+      &:hover
+        transition: all .3s
+        color: $bgc
 
   .link__button
     &:hover
       transition: all 0.3s
-      filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15))
+      color: $bgc
+      //filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15))
       &::before
         transition: all 0.3s
         right: 22px
@@ -59,7 +75,11 @@
     &__item
       &:hover
         transition: all 0.3s
-        // transform: scale(1.01)
+        filter: drop-shadow(3px 3px 10px rgba(50, 50, 50, 0.15))
+        color: $red
+    &-goods__item
+      &:hover
+        transition: all 0.3s
         filter: drop-shadow(3px 3px 10px rgba(50, 50, 50, 0.15))
         color: $red
     &__image
@@ -72,15 +92,21 @@
         background: $red url('../images/icons/icons.svg#cart-white') no-repeat center center
         width: 36px
         height: 36px
-  .favorites__item:hover .favorites__title, .favorites__item:hover .favorites__price
+  .favorites__item:hover .favorites__title, .favorites__item:hover .favorites__price, .favorites-goods__item:hover .favorites__title
     transition: all 0.3s
     color: $red
   .favorites__nav--left.swiper-button-prev:hover
-    transition: all 0.3s
-    filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.15))
+    transition: background-color 1s ease-out
+    background-color: $red
+    border-radius: 50%
+  .favorites__nav--left.swiper-button-prev:hover::after
+    color: $bgc
   .favorites__nav--right.swiper-button-next:hover
-    transition: all 0.3s
-    filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.15))
+    transition: background-color 1s ease-out
+    background-color: $red
+    border-radius: 50%
+  .favorites__nav--right.swiper-button-next:hover::after
+    color: $bgc
 
   .news
     &__item:hover .news__img
@@ -89,6 +115,7 @@
       // color: $red
     &__link
       &:hover
+        color: $red
         &::before
           transition: all 0.3s
           right: -20px
@@ -96,6 +123,39 @@
       &:hover
         &::before
           right: 18px
+
+  .good
+    &-photos__big
+      &:hover
+        border: 2px solid rgba(237, 34, 40, 1)
+    &-photos__small
+      &:hover
+        border: 2px solid rgba(237, 34, 40, 1)
+    &-photos__img
+      &:hover
+        transform: scale(1.02)
+    &-info__brend-link
+      &::before
+        content: ''
+        position: absolute
+        width: 0
+        left: auto
+        background-color: $red
+        height: 2px
+        bottom: -3px
+        right: 0
+        transition: all .3s
+      &:hover
+        color: $red
+        &::before
+          width: 100%
+          right: auto
+          left: 0
+    &-info__btn-cart
+      &:hover
+        &::before
+          transition: all 1s
+          transform: scale(1.10)
 
   .footer
     &__link

@@ -40,8 +40,6 @@ let { src, dest, task } = require("gulp"),
   rename = require("gulp-rename"),
   imagemin = require("gulp-imagemin"),
   svgsprite = require("gulp-svg-sprite"),
-  webp = require("gulp-webp"),
-  webphtml = require("gulp-webp-html"),
   ttf2woff = require("gulp-ttf2woff"),
   ttf2woff2 = require("gulp-ttf2woff2"),
   fonter = require("gulp-fonter"),
@@ -59,7 +57,7 @@ function browserSync(params) {
 }
 
 function html() {
-  return src(path.src.html).pipe(fileinclude()).pipe(webphtml()).pipe(dest(path.build.html)).pipe(browsersync.stream());
+  return src(path.src.html).pipe(fileinclude()).pipe(dest(path.build.html)).pipe(browsersync.stream());
 }
 
 function css() {
@@ -114,16 +112,7 @@ function jsadd() {
 
 //--- конвертирование JPG в WEBP + копирование JPG в dist
 function images() {
-  return src(path.src.images)
-    .pipe(
-      webp({
-        quality: 85,
-      })
-    )
-    .pipe(dest(path.build.images))
-    .pipe(src(path.src.images))
-    .pipe(dest(path.build.images))
-    .pipe(browsersync.stream());
+  return src(path.src.images).pipe(dest(path.build.images)).pipe(browsersync.stream());
 }
 //---END
 

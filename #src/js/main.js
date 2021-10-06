@@ -51,3 +51,30 @@ var headerSlider = new Swiper(".brends__slider", {
   spaceBetween: 20,
 });
 //-----
+
+// табы для товара
+$("ul.characteristics__tabs").on("click", "li:not(.characteristics__tab_active)", function () {
+  $(this)
+    .addClass("characteristics__tab_active")
+    .siblings()
+    .removeClass("characteristics__tab_active")
+    .closest("section.characteristics")
+    .find("div.characteristics__info")
+    .removeClass("characteristics__info_active")
+    .eq($(this).index())
+    .addClass("characteristics__info_active");
+});
+// -----
+
+function input_val(dir, elid) {
+  console.log(dir + " " + elid);
+  var inputEl = document.getElementById(elid);
+  console.log(inputEl);
+  var value = parseInt(inputEl.value, 10);
+  if (isNaN(value)) value = 0;
+
+  if (dir == "dec") value--;
+  else if (dir == "inc") value++;
+
+  inputEl.value = value;
+}

@@ -10,20 +10,16 @@
     align-items: center
     &--left.swiper-button-prev
       position: relative
+      //left: 1px
       height: 45px
-      width: 55px
-      color: $bgc
-      background-color: $red
-      border-radius: 25px
+      width: 45px
     &--left
       margin-right: 25px
     &--right.swiper-button-next
       position: relative
+      //right: 1px
       height: 45px
-      width: 55px
-      color: $bgc
-      background-color: $red
-      border-radius: 25px
+      width: 45px
   &__content
     display: flex
     align-items: center
@@ -83,7 +79,7 @@
     margin-top: 30px
   &__price
     @extend %text-title
-    font-size: 22px
+    font-size: 20px
     color: $bl
   &__button
     transition: all 0.3s
@@ -96,13 +92,33 @@
   &__basket
     width: 25px
     height: 25px
+  &-goods
+    margin-bottom: 100px
+    &__title
+      margin-bottom: 20px
+    &__item
+      box-sizing: border-box
+      position: relative
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: flex-end
+      width: 250px
+      height: 373px
+      margin-right: 20px
+      padding: 20px
+      border-radius: 5px
+      background-color: $grey
+      transition: all 0.3s
 
 .favorites__nav--left.swiper-button-prev::after
   font-size: 17px
   text-align: center
+  color: $red
 .favorites__nav--right.swiper-button-next::after
   font-size: 17px
   text-align: center
+  color: $red
 .favorites__nav--left.swiper-button-prev::before
   display: none
 .favorites__nav--right.swiper-button-next::before

@@ -11,9 +11,12 @@
     font-weight: 400
     font-size: 14px
     line-height: 16px
-    color: $bl
-  &-link
     color: $bll
-    &::after
-      content: ' /'
-      margin-right: 4px
+    &:last-child
+      color: $black
+    &:not(:last-child)
+      &::after
+        content: ' /'
+        margin-right: 4px
+  &-link
+    color: inherit

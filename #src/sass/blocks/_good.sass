@@ -4,87 +4,114 @@
     display: flex
     align-items: start
   &-photos
-    display: flex
-    align-items: flex-start
-    margin-right: 100px
+    &__gallery
+      display: grid
+      grid-template-columns: 400px 100px
+      grid-template-rows: repeat(3, 100px)
+      column-gap: 25px
+      row-gap: 50px
+      margin-right: 100px
     &__big
+      grid-row: 1/4
+      grid-column: 1/2
       position: relative
       width: 400px
       height: 400px
-      padding: 5px
+      padding: 15px
       margin-right: 25px
       border-radius: 5px
       border: 2px solid rgba(237, 34, 40, 0)
       transition: all 0.5s
-      &:hover
-        border: 2px solid rgba(237, 34, 40, 1)
     &__small
       width: 100px
       height: 100px
-      padding: 5px
+      padding: 10px
       margin-right: 25px
       border-radius: 5px
       border: 2px solid rgba(237, 34, 40, 0.1)
       transition: all 0.5s
-      &:not(:last-child)
-        margin-bottom: 50px
-      &:hover
-        border: 2px solid rgba(237, 34, 40, 1)
+      // &:not(:last-child)
+      //   // margin-bottom: 50px
     &__img
       width: 100%
       height: 100%
       object-fit: cover
       transition: all 0.5s
-      &:hover
-        transform: scale(1.02)
   &-info
     margin-right: 35px
     &__title
       margin-bottom: 20px
       font-size: 38px
       line-height: 42px
+      &::before
+        height: 0px
+        background-color: none
     &__code
       margin-right: 60px
       font-weight: 400
-      font-size: 12px
+      font-size: 14px
       line-height: 14px
       color: $bll
     &__brend
       font-weight: 400
-      font-size: 12px
+      font-size: 14px
       line-height: 14px
       color: $bll
       &-link
+        position: relative
         font-weight: 700
         color: $red
     &__exist
       margin-top: 15px
       margin-bottom: 30px
       @extend %body
-      // font-size: 16px
-      // line-height: 14px
       color: #48943C
       position: relative
       padding-left: 15px
       &::before
-        content: ''
+        content: '✓'
         width: 7px
         height: 7px
-        background-color: #48943C
-        border-radius: 50%
-        top: 9px
-        left: 0
+        // background-color: #48943C
+        // border-radius: 50%
+        top: 1px
+        left: -1px
         position: absolute
+    &__exist-no
+      margin-top: 15px
+      margin-bottom: 30px
+      @extend %body
+      color: $red
+      position: relative
+      padding-left: 15px
+      &::before
+        content: ''
+        position: absolute
+        top: 10px
+        left: 0
+        width: 15px
+        height: 15px
+        transform: rotate(45deg)
+        border-left: 2px solid $red
+      &::after
+        content: ''
+        position: absolute
+        top: 1px
+        left: 0
+        width: 15px
+        height: 15px
+        transform: rotate(-45deg)
+        border-left: 2px solid $red
     &__price
       margin-bottom: 40px
       &-text
         font-family: 'Raleway-Medium'
         font-weight: 400
-        font-size: 10px
+        font-size: 12px
         line-height: 1
         color: $bll
       &-num
-        font-family: 'Raleway-Bold'
+        font-family: 'MuseoSansCyrl-700', sans-serif
         font-weight: 700
         font-size: 32px
         line-height: 1
@@ -96,29 +123,67 @@
         border: none
         width: 60px
         height: 50px
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25)
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15)
         border-radius: 5px
         font-weight: 400
         font-size: 22px
         line-height: 24px
         color: $bll
-        // background: #FFFFFF
       &-cart
-        background: #ED2228
+        background: url(../images/icons/icons.svg#cart-white) no-repeat 0 0, $red
+        background-size: 30px 30px
+        background-position: 14px 10px
         border-radius: 3px
         height: 50px
         padding-left: 55px
         padding-right: 25px
+        margin-left: 35px
+        border: none
+        @extend %text-title
+        font-weight: 700
+        color: $bgc
+        cursor: pointer
         &::before
-          content: ''
-          position: absolute
-          top: 14px
-          left: 20px
-          width: 30px
-          height: 30px
-          background: url(../images/icons/icons.svg#cart-white) no-repeat 0 0
-          transition: all 0.3s
-        &:hover
-          &::before
-            transition: all 1s
-            transform: scale(1.10)
+          content: none
+  &-favorites__heading
+    font-size: 24px
+
+  &__quant
+    display: inline-flex
+    position: relative
+    // width: 650px
+    & input[type="number"]
+      display: flex
+      height: 50px
+      line-height: 22px
+      width: 100px
+      padding: 0
+      margin: 0
+      text-align: center
+      -moz-appearance: textfield
+      -webkit-appearance: textfield
+      appearance: textfield
+    & input[type="number"]::-webkit-outer-spin-button,
+    & input[type="number"]::-webkit-inner-spin-button
+      display: none
+    &-btn
+      position: absolute
+      top: 0px
+      bottom: 0px
+      width: 20px
+      padding: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      color: rgba(46,46,46,.5)
+      border: none
+      font-size: 16px
+      font-weight: 500
+      overflow: hidden
+      cursor: pointer
+    &-minus
+      left: 0px
+      border-right: 1px solid rgba(46,46,46,.1)
+    &-plus
+      left: 80px
+      border-left: 1px solid rgba(46,46,46,.1)

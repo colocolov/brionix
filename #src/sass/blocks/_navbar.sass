@@ -2,6 +2,8 @@
   display: flex
   justify-content: space-between
   align-items: center
+  padding-top: 0
+  padding-bottom: 0
   &__info
     position: relative
   &__phone
@@ -54,6 +56,8 @@
 
 .button
   padding: 10px 15px
+  &--entry
+    transition: all 0.3s
   &--registration
     font-family: 'Raleway-Medium', sans-serif
     font-weight: 400
@@ -116,9 +120,13 @@
         background: url(../images/icons/icons.svg#cart-top) no-repeat -2px 4px
         width: 25px
         height: 25px
+      &:hover
+        color: $red
+        transition: all 0.5s
     &-title
       @extend %text-title
       line-height: 18px
+      color: inherit
     &-total
       font-family: 'Raleway-Medium', sans-serif
       font-weight: 400
@@ -137,7 +145,7 @@
     &:last-child
       border-right: 1px solid $bll
   &__link
-    padding: 14px 18px
+    padding: 14px 16px
     display: flex
     align-items: center
     font-family: 'Raleway-Regular'
@@ -151,4 +159,4 @@
   &__img
     height: 15px
     display: inline-block
-    margin-right: 6px
+    margin-right: 3px
