@@ -3,20 +3,20 @@
   padding-top: 25px
   padding-bottom: 25px
   margin-bottom: 70px
-  &-list
+  &__list
     display: flex
     align-items: center
-  &-item
-    font-family: "Raleway-Regular"
-    font-weight: 400
-    font-size: 14px
-    line-height: 16px
-    color: $bll
-    &:last-child
-      color: $black
-    &:not(:last-child)
-      &::after
-        content: ' /'
-        margin-right: 4px
-  &-link
-    color: inherit
+    &-item
+      font-family: "Raleway-Regular"
+      font-weight: 400
+      font-size: 14px
+      line-height: 16px
+      color: $bll
+      &:last-child
+        color: $black
+      &:not(:last-child)
+        &::after
+          content: ' /'
+          margin-right: 4px
+      a
+        color: inherit

@@ -52,29 +52,39 @@ var headerSlider = new Swiper(".brends__slider", {
 });
 //-----
 
-// табы для товара
-$("ul.characteristics__tabs").on("click", "li:not(.characteristics__tab_active)", function () {
-  $(this)
-    .addClass("characteristics__tab_active")
-    .siblings()
-    .removeClass("characteristics__tab_active")
-    .closest("section.characteristics")
-    .find("div.characteristics__info")
-    .removeClass("characteristics__info_active")
-    .eq($(this).index())
-    .addClass("characteristics__info_active");
+$(document).ready(function () {
+  // табы для товара
+  $("ul.characteristics__tabs").on("click", "li:not(.characteristics__tab_active)", function () {
+    $(this)
+      .addClass("characteristics__tab_active")
+      .siblings()
+      .removeClass("characteristics__tab_active")
+      .closest("section.characteristics")
+      .find("div.characteristics__info")
+      .removeClass("characteristics__info_active")
+      .eq($(this).index())
+      .addClass("characteristics__info_active");
+  });
+  // -----
+
+  // скрытие/показ разделов в фильтре
+  $(".filter__item-drop").on("click", function () {
+    $(this).toggleClass("filter__item-drop--active");
+    $(this).next().slideToggle("200");
+  });
+  // ------
+
+  // стилизация чекбоксов и радио кнопки
+  $(".filter-style").styler();
+  // ------
+
+  // стилизация фильтра цены
+  $(".js-range-slider").ionRangeSlider({
+    type: "double",
+    step: 50,
+    grid: false,
+  });
+  // -----
+
+  // end JQ
 });
-// -----
-
-function input_val(dir, elid) {
-  console.log(dir + " " + elid);
-  var inputEl = document.getElementById(elid);
-  console.log(inputEl);
-  var value = parseInt(inputEl.value, 10);
-  if (isNaN(value)) value = 0;
-
-  if (dir == "dec") value--;
-  else if (dir == "inc") value++;
-
-  inputEl.value = value;
-}

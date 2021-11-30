@@ -1,0 +1,51 @@
+.catalog
+  margin-bottom: 100px
+  &__heading
+    font-size: 30px
+    line-height: 37px
+    margin-bottom: 24px
+  &__filter
+    display: flex
+    justify-content: space-between
+    margin-bottom: 45px
+    &-item button
+      position: relative
+      @extend %podpisi
+      font-size: 14px
+      color: $text
+      padding: 5px 33px 5px 17px
+      background: $bgc
+      border: 1px solid rgba(46, 46, 46, 0.25)
+      border-radius: 15px
+      cursor: pointer
+      transition: all 0.5s
+      &::before
+        position: absolute
+        content: ''
+        top: 1px
+        // bottom: 2px
+        right: 5px
+        width: 24px
+        height: 24px
+        background: url(../images/iconsprite/circle-x.svg) no-repeat 0 0
+      & + button
+        margin-left: 10px
+    &-btn button
+      background: transparent
+      border: none
+      cursor: pointer
+      padding: 0
+      margin: 0
+      + button
+        margin-left: 10px
+  &__inner
+    display: flex
+    &-aside
+      min-width: 290px
+      margin-right: 20px
+    &-list
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      & .catalog__wrapper
+        margin-bottom: 30px

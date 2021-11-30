@@ -33,8 +33,8 @@
       transition: all .3s
       color: $red
 
-  .breadcrumbs
-    &-link
+  .breadcrumbs__list-item
+    a
       &:hover
         transition: all .3s
         color: $bl
@@ -84,8 +84,8 @@
         color: $red
     &__image
       &:hover
-        transition: all 1s
-        transform: scale(1.1)
+        // transition: all 1s
+        // transform: scale(1.1)
     &__button
       &:hover
         transition: all 0.3s
@@ -156,6 +156,14 @@
         &::before
           transition: all 1s
           transform: scale(1.10)
+
+  .catalog
+    &__filter-item button
+      &:hover
+        background: $grey
+  .pagination-list__item a
+    &:hover
+      color: $red
 
   .footer
     &__link

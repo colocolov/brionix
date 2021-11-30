@@ -1,0 +1,213 @@
+.aside-filter
+  &__title
+    font-family: "Montserrat-Bold"
+    font-weight: 700
+    font-size: 16px
+    line-height: 20px
+    letter-spacing: 0.09em
+    text-transform: uppercase
+    color: $bl
+    span
+      display: inline-block
+      padding-bottom: 7px
+      border-bottom: 2px solid $red
+      padding-right: 20px
+  &__form
+    margin: 40px 0
+  &__item
+    &-drop
+      margin-bottom: 30px
+    &-title
+      @extend %filter-title
+      padding-left: 22px
+    &-list
+      margin: 46px 0 40px
+  &__content
+    display: flex
+    flex-wrap: wrap
+    margin-top: 14px
+    &-box
+      width: 50%
+      margin-bottom: 10px
+    &-label
+      cursor: pointer
+      font-family: 'Raleway-Regular', sans-serif
+      font-weight: 400
+      font-size: 14px
+      line-height: 17px
+      color: $bl
+
+.filter
+  &__item-drop
+    position: relative
+    cursor: pointer
+    &::before
+      content: ''
+      position: absolute
+      background-image: url(../images/icons/icons.svg#arrow-left-link)
+      top: 4px
+      left: 0px
+      width: 15px
+      height: 11px
+      transform: rotate(90deg)
+      transition: all 0.5s
+    &--active
+      &::before
+        transform: rotate(270deg)
+  &__item-list
+    display: flex
+    justify-content: space-between
+    padding-top: 34px
+    padding-bottom: 7px
+    border-bottom: 2px solid #C4C4C4
+  &__item-listtitle
+    @extend %filter-title
+    padding-left: 26px
+  &__item-listselect
+    font-size: 14px
+    line-height: 17px
+    color: $bl
+    font-family: 'Montserrat-Medium', sans-serif
+  &-more
+    width: 100%
+    line-height: 18px
+    &__btn
+      font-size: 14px
+      line-height: 17px
+      color: $red
+      border: none
+      border-bottom: 1px solid $red
+      background: transparent
+      padding: 0
+
+.jq-checkbox, .jq-radio
+  background: $bgc
+  border: 1px solid #C4C4C4
+  box-shadow: none
+  height: 14px
+  width: 14px
+  vertical-align: -2px
+  border-radius: 2px
+.jq-checkbox.checked, .jq-raido.checked
+  border: 1px solid $red
+  background: $red
+  border-radius: 0
+.jq-checkbox.checked .jq-checkbox__div
+  height: 6px
+  margin-left: 2px
+  border-bottom: none
+  border-left: none
+  transform: rotate(0)
+  background-image: url(../images/iconsprite/checked.svg)
+
+.jq-selectbox__select
+  height: 20px
+  padding: 0 28px 0 0
+  border: none
+  border-radius: 0
+  background: transparent
+  box-shadow: none
+  text-shadow: none
+  font-family: 'Montserrat-Medium', sans-serif
+  font-weight: 500
+  font-size: 14px
+  line-height: 17px
+  color: $bl
+  &:hover
+    background: transparent
+  &:active
+    box-shadow: none
+.jq-selectbox.focused .jq-selectbox__select
+  border: none
+.jq-selectbox__trigger
+  background-image: url(../images/icons/icons.svg#arrow-left-link)
+  transform: rotate(90deg)
+  top: 4px
+  right: 8px
+  bottom 5px
+  width: 15px
+  height: 11px
+  border-left: none
+  &-arrow
+    position: absolute
+    top: 14px
+    right: 12px
+    width: 0
+    height: 0
+    border: none
+.jq-selectbox__dropdown
+  border-radius: 0
+  border: none
+  margin: 0
+  margin-top: 7px
+  padding-top: 15px
+  box-shadow: 0 2px 10px rgba(0, 0, 0 , 0.1)
+.jq-selectbox__select-text
+  text-align: end
+.jq-selectbox li
+  color: $text
+  text-align: end
+  &.selected
+    background: rgba(107, 126, 172, 0.05)
+    color: $bl
+  &:hover
+    background: rgba(107, 126, 172, 0.05)
+    color: $bl
+
+.irs--flat
+  width: 100%
+.irs--flat .irs-min, .irs--flat .irs-max
+  top: 60px
+  font-family: "Montserrat-Medium", sans-serif
+  font-weight: 500
+  font-size: 14px
+  line-height: 17px
+  text-decoration-line: underline
+  color: $bl
+  padding: 0
+  background-color: transparent
+  border-radius: 0
+  padding-left: 27px
+  visibility: visible !important
+.irs-min::before,
+.irs-max::before
+  position: absolute
+  line-height: 17px
+  font-size: 14px
+  color: #C4C4C4
+  text-decoration: none
+  left: 0
+.irs-min::before
+  content: "от"
+.irs-max::before
+  content: "до"
+.irs--flat .irs-line
+  height: 5px
+  color: $grey
+.irs--flat .irs-bar
+  top: 24px
+  height: 7px
+  background-color: $red
+.irs--flat .irs-handle
+  top: 21px
+  background-color: $red
+  height: 13px
+  width: 13px
+  border-radius: 50%
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single
+  color: white
+  font-family: "Montserrat-Medium", sans-serif
+  font-size: 10px
+  line-height: 1.33
+  text-shadow: none
+  padding: 2px 5px
+  background-color: $red
+  border-radius: 2px
+// .irs-from
+//   left: 8.6% !important
+// .irs-to
+//   left: 44.4% !important
+.irs--flat .irs-handle>i:first-child
+  background-color: $red
+.irs--flat .irs-handle.state_hover>i:first-child, .irs--flat .irs-handle:hover>i:first-child
+  background-color: $red
