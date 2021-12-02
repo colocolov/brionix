@@ -38,11 +38,114 @@
       margin: 0
       + button
         margin-left: 10px
+    &-select
+      border: 1px solid $grey
+      padding: 8px 10px 7px
+      margin-right: 35px
+    &-btngrid
+      height: 26px
+      width: 25px
+      opacity: 0.3
+      outline: none
+    &-btnline
+      opacity: 0.3
+      outline: none
+    &-btn
+      display: flex
+      align-items: center
+      &--active
+        opacity: 1
+  &__item
+    margin-right: 0
+    margin-bottom: 30px
+    width: 253px
+    transition: all 1.5s step-start
+    &-left
+      margin-right: 0px
+      &--line
+        margin-right: 30px
+    &-right
+      width: 100%
+      &--line
+        display: flex
+        align-items: center
+        flex-shrink: 0
+        width: auto
+        // margin-right: 30px
+    &--line
+      width: 100%
+      height: auto
+      flex-direction: row
+      justify-content: space-between
+      transition: all 0.5s step-start
+      &-remove
+        display: none
+        width: 0
+        height: 0
+      &-title
+        flex-basis: 100%
+        text-align: left
+      &-code
+        display: none
+        position: relative
+        flex-shrink: 0
+        padding: 0 30px 0 0
+        margin-left: 30px
+        font-size: 18px
+        line-height: 36px
+        color: $black
+        transition: all 0.5s step-start
+        &::before
+          content: ""
+          position: absolute
+          height: 100%
+          top: 0
+          left: -30px
+          width: 2px
+          background-color: $text
+        &.show
+          display: inline-block
+      &-brend
+        display: none
+        position: relative
+        flex-shrink: 0
+        padding: 0 30px 0 0
+        margin-left: 30px
+        font-size: 18px
+        line-height: 36px
+        color: $black
+        &::before
+          content: ""
+          position: absolute
+          height: 100%
+          top: 0
+          left: -30px
+          width: 2px
+          background-color: $text
+        &.show
+          display: inline-block
+      &-cart
+        position: relative
+        flex-shrink: 0
+        margin-top: 0
+        width: auto
+        margin-left: 30px
+        &::before
+          content: ""
+          position: absolute
+          height: 100%
+          top: 0
+          left: -30px
+          width: 2px
+          background-color: $text
+      &-button
+        margin-left: 30px
+
   &__inner
     display: flex
     &-aside
       min-width: 290px
-      margin-right: 20px
+      margin-right: 30px
     &-list
       display: flex
       justify-content: space-between

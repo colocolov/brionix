@@ -8,8 +8,8 @@
       <div class="breadcrumbs">
         <div class="container">
           <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__list-item"><a href="#">Главная</a></li>
-            <li class="breadcrumbs__list-item"><a href="#">Каталог товаров</a></li>
+            <li class="breadcrumbs__list-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumbs__list-item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="breadcrumbs__list-item"><a href="#">Автомасла</a></li>
             <li class="breadcrumbs__list-item">IGAT PLATIN DLS SAE 5W-30 (5L)</li>
           </ul>
@@ -27,12 +27,12 @@
               <button>IGAT</button>
             </div>
             <div class="catalog__filter-btn">
-              <select class="filter-style">
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
+              <select class="filter-style catalog__filter-select">
+                <option value="">По умолчанию</option>
+                <option value="">По цене: сначала дешевые</option>
+                <option value="">По цене: снчала дорогие</option>
               </select>
-              <button class="catalog__filter-btngrid">
+              <button class="catalog__filter-btngrid catalog__filter-btn--active">
                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="21" height="19" stroke="#2F3035" stroke-width="2" />
                   <rect x="7" y="6" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2" />
@@ -43,14 +43,12 @@
               </button>
               <button class="catalog__filter-btnline">
                 <svg width="25" height="19" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g opacity="0.3">
-                    <rect x="6.00006" width="19" height="3" rx="1.5" fill="#2F3035" />
-                    <rect x="6.00006" y="8" width="19" height="3" rx="1.5" fill="#2F3035" />
-                    <rect x="6.00006" y="16" width="19" height="3" rx="1.5" fill="#2F3035" />
-                    <rect width="3" height="3" rx="1.5" fill="#2F3035" />
-                    <rect y="8" width="3" height="3" rx="1.5" fill="#2F3035" />
-                    <rect y="16" width="3" height="3" rx="1.5" fill="#2F3035" />
-                  </g>
+                  <rect x="6.00006" width="19" height="3" rx="1.5" fill="#2F3035" />
+                  <rect x="6.00006" y="8" width="19" height="3" rx="1.5" fill="#2F3035" />
+                  <rect x="6.00006" y="16" width="19" height="3" rx="1.5" fill="#2F3035" />
+                  <rect width="3" height="3" rx="1.5" fill="#2F3035" />
+                  <rect y="8" width="3" height="3" rx="1.5" fill="#2F3035" />
+                  <rect y="16" width="3" height="3" rx="1.5" fill="#2F3035" />
                 </svg>
               </button>
             </div>
@@ -221,13 +219,18 @@
                       </div>
                     </div>
                   </li>
+
+                  <li class="aside-filter__item-drop aside-filter__item-btn">
+                    <button class="filter-btn__send filter-btn__send--active" type="submit">ВЫБРАТЬ</button>
+                    <button class="filter-btn__reset" type="submit">Сбросить фильтр</button>
+                  </li>
                 </ul>
               </form>
             </aside>
             <!-- /.catalog__inner-aside -->
             <div class="catalog__inner-list">
-              <div class="catalog__wrapper">
-                <div class="favorites__item">
+              <div class="favorites__item catalog__item">
+                <div class="catalog__item-left">
                   <div class="favorites__labels">
                     <span class="favorites__hit">Хит</span>
                   </div>
@@ -235,100 +238,92 @@
                     <a href="tovar.html"><img class="favorites__img" src="images/goods/dls.png" alt="" /></a>
                   </div>
                   <a href="tovar.html"><h3 class="favorites__title">IGAT PLATIN DLS SAE 5W-30 (5L)</h3></a>
+                </div>
+                <div class="catalog__item-right">
+                  <span class="catalog__item--line-code">T1246</span>
+                  <span class="catalog__item--line-brend">IGAT</span>
                   <div class="favorites__cart">
                     <span class="favorites__price">890 л</span>
                     <a class="favorites__button" href="#"></a>
                   </div>
                 </div>
               </div>
-              <div class="catalog__wrapper">
-                <div class="favorites__item">
-                  <div class="favorites__labels">
-                    <span class="favorites__hit">Хит</span>
-                  </div>
-                  <div class="favorites__image">
-                    <a href="tovar.html"><img class="favorites__img" src="images/goods/dls.png" alt="" /></a>
-                  </div>
-                  <a href="tovar.html"><h3 class="favorites__title">IGAT PLATIN DLS SAE 5W-30 (5L)</h3></a>
-                  <div class="favorites__cart">
-                    <span class="favorites__price">890 л</span>
-                    <a class="favorites__button" href="#"></a>
-                  </div>
+              <div class="favorites__item catalog__item">
+                <div class="favorites__labels">
+                  <span class="favorites__hit">Хит</span>
+                </div>
+                <div class="favorites__image">
+                  <a href="tovar.html"><img class="favorites__img" src="images/goods/dls.png" alt="" /></a>
+                </div>
+                <a href="tovar.html"><h3 class="favorites__title">IGAT PLATIN DLS SAE 5W-30 (5L)</h3></a>
+                <div class="favorites__cart">
+                  <span class="favorites__price">890 л</span>
+                  <a class="favorites__button" href="#"></a>
                 </div>
               </div>
-              <div class="catalog__wrapper">
-                <div class="favorites__item">
-                  <div class="favorites__labels">
-                    <span class="favorites__hit">Хит</span>
-                  </div>
-                  <div class="favorites__image">
-                    <a href="tovar.html"><img class="favorites__img" src="images/goods/dls.png" alt="" /></a>
-                  </div>
-                  <a href="tovar.html"><h3 class="favorites__title">IGAT PLATIN DLS SAE 5W-30 (5L)</h3></a>
-                  <div class="favorites__cart">
-                    <span class="favorites__price">890 л</span>
-                    <a class="favorites__button" href="#"></a>
-                  </div>
+              <div class="favorites__item catalog__item">
+                <div class="favorites__labels">
+                  <span class="favorites__hit">Хит</span>
+                </div>
+                <div class="favorites__image">
+                  <a href="tovar.html"><img class="favorites__img" src="images/goods/dls.png" alt="" /></a>
+                </div>
+                <a href="tovar.html"><h3 class="favorites__title">IGAT PLATIN DLS SAE 5W-30 (5L)</h3></a>
+                <div class="favorites__cart">
+                  <span class="favorites__price">890 л</span>
+                  <a class="favorites__button" href="#"></a>
                 </div>
               </div>
-              <div class="catalog__wrapper">
-                <div class="favorites__item">
-                  <div class="favorites__labels">
-                    <span class="favorites__hit">Хит</span>
-                  </div>
-                  <div class="favorites__image">
-                    <a href="tovar.html"><img class="favorites__img" src="images/goods/dls.png" alt="" /></a>
-                  </div>
-                  <a href="tovar.html"><h3 class="favorites__title">IGAT PLATIN DLS SAE 5W-30 (5L)</h3></a>
-                  <div class="favorites__cart">
-                    <span class="favorites__price">890 л</span>
-                    <a class="favorites__button" href="#"></a>
-                  </div>
+              <div class="favorites__item catalog__item">
+                <div class="favorites__labels">
+                  <span class="favorites__hit">Хит</span>
+                </div>
+                <div class="favorites__image">
+                  <a href="tovar.html"><img class="favorites__img" src="images/goods/dls.png" alt="" /></a>
+                </div>
+                <a href="tovar.html"><h3 class="favorites__title">IGAT PLATIN DLS SAE 5W-30 (5L)</h3></a>
+                <div class="favorites__cart">
+                  <span class="favorites__price">890 л</span>
+                  <a class="favorites__button" href="#"></a>
                 </div>
               </div>
-              <div class="catalog__wrapper">
-                <div class="favorites__item">
-                  <div class="favorites__labels">
-                    <span class="favorites__hit">Хит</span>
-                  </div>
-                  <div class="favorites__image">
-                    <a href="tovar.html"><img class="favorites__img" src="images/goods/dls.png" alt="" /></a>
-                  </div>
-                  <a href="tovar.html"><h3 class="favorites__title">IGAT PLATIN DLS SAE 5W-30 (5L)</h3></a>
-                  <div class="favorites__cart">
-                    <span class="favorites__price">890 л</span>
-                    <a class="favorites__button" href="#"></a>
-                  </div>
+              <div class="favorites__item catalog__item">
+                <div class="favorites__labels">
+                  <span class="favorites__hit">Хит</span>
+                </div>
+                <div class="favorites__image">
+                  <a href="tovar.html"><img class="favorites__img" src="images/goods/dls.png" alt="" /></a>
+                </div>
+                <a href="tovar.html"><h3 class="favorites__title">IGAT PLATIN DLS SAE 5W-30 (5L)</h3></a>
+                <div class="favorites__cart">
+                  <span class="favorites__price">890 л</span>
+                  <a class="favorites__button" href="#"></a>
                 </div>
               </div>
-              <div class="catalog__wrapper">
-                <div class="favorites__item">
-                  <div class="favorites__labels">
-                    <span class="favorites__hit">Хит</span>
-                  </div>
-                  <div class="favorites__image">
-                    <a href="tovar.html"><img class="favorites__img" src="images/goods/dls.png" alt="" /></a>
-                  </div>
-                  <a href="tovar.html"><h3 class="favorites__title">IGAT PLATIN DLS SAE 5W-30 (5L)</h3></a>
-                  <div class="favorites__cart">
-                    <span class="favorites__price">890 л</span>
-                    <a class="favorites__button" href="#"></a>
-                  </div>
+              <div class="favorites__item catalog__item">
+                <div class="favorites__labels">
+                  <span class="favorites__hit">Хит</span>
+                </div>
+                <div class="favorites__image">
+                  <a href="tovar.html"><img class="favorites__img" src="images/goods/dls.png" alt="" /></a>
+                </div>
+                <a href="tovar.html"><h3 class="favorites__title">IGAT PLATIN DLS SAE 5W-30 (5L)</h3></a>
+                <div class="favorites__cart">
+                  <span class="favorites__price">890 л</span>
+                  <a class="favorites__button" href="#"></a>
                 </div>
               </div>
-              <div class="catalog__wrapper">
-                <div class="favorites__item">
-                  <div class="favorites__labels">
-                    <span class="favorites__hit">Хит</span>
-                  </div>
-                  <div class="favorites__image">
-                    <a href="tovar.html"><img class="favorites__img" src="images/goods/dls.png" alt="" /></a>
-                  </div>
-                  <a href="tovar.html"><h3 class="favorites__title">IGAT PLATIN DLS SAE 5W-30 (5L)</h3></a>
-                  <div class="favorites__cart">
-                    <span class="favorites__price">890 л</span>
-                    <a class="favorites__button" href="#"></a>
-                  </div>
+              <div class="favorites__item catalog__item">
+                <div class="favorites__labels">
+                  <span class="favorites__hit">Хит</span>
+                </div>
+                <div class="favorites__image">
+                  <a href="tovar.html"><img class="favorites__img" src="images/goods/dls.png" alt="" /></a>
+                </div>
+                <a href="tovar.html"><h3 class="favorites__title">IGAT PLATIN DLS SAE 5W-30 (5L)</h3></a>
+                <div class="favorites__cart">
+                  <span class="favorites__price">890 л</span>
+                  <a class="favorites__button" href="#"></a>
                 </div>
               </div>
               <!-- /end of catalog list -->

@@ -67,6 +67,40 @@ $(document).ready(function () {
   });
   // -----
 
+  // смена отображения товаров в каталоге
+  $(".catalog__filter-btngrid").on("click", function () {
+    $(this).addClass("catalog__filter-btn--active");
+    $(".catalog__filter-btnline").removeClass("catalog__filter-btn--active");
+    // товар в сетку
+    $(".catalog__item").removeClass("catalog__item--line");
+    $(".catalog__item-left").removeClass("catalog__item-left--line");
+    $(".catalog__item-right").removeClass("catalog__item-right--line");
+    $(".favorites__labels").removeClass("catalog__item--line-remove");
+    $(".favorites__image").removeClass("catalog__item--line-remove");
+    $(".favorites__title").removeClass("catalog__item--line-title");
+    $(".catalog__item--line-code").removeClass("show");
+    $(".catalog__item--line-brend").removeClass("show");
+    $(".favorites__cart").removeClass("catalog__item--line-cart");
+    $(".favorites__button").removeClass("catalog__item--line-button");
+  });
+
+  $(".catalog__filter-btnline").on("click", function () {
+    $(this).addClass("catalog__filter-btn--active");
+    $(".catalog__filter-btngrid").removeClass("catalog__filter-btn--active");
+    // товар в строку
+    $(".catalog__item").addClass("catalog__item--line");
+    $(".catalog__item-left").addClass("catalog__item-left--line");
+    $(".catalog__item-right").addClass("catalog__item-right--line");
+    $(".favorites__labels").addClass("catalog__item--line-remove");
+    $(".favorites__image").addClass("catalog__item--line-remove");
+    $(".favorites__title").addClass("catalog__item--line-title");
+    $(".catalog__item--line-code").addClass("show");
+    $(".catalog__item--line-brend").addClass("show");
+    $(".favorites__cart").addClass("catalog__item--line-cart");
+    $(".favorites__button").addClass("catalog__item--line-button");
+  });
+  // ------
+
   // скрытие/показ разделов в фильтре
   $(".filter__item-drop").on("click", function () {
     $(this).toggleClass("filter__item-drop--active");
