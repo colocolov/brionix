@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('_head.html')
+  <body>
+    <div class="wrapper">
+      @@include('_header.html')
+
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__list-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumbs__list-item">Корзина</li>
+          </ul>
+        </div>
+      </div>
+      <!-- /.breadcrumbs -->
+
+      <section class="cart">
+        <div class="container">
+          <h2 class="heading cart__heading">Товары в корзине</h2>
+          <div class="cart__wrap">
+            <div class="cart__info">
+              <table class="table cart__table">
+                <thead>
+                  <tr>
+                    <th></thscope=>
+                    <th></th>
+                    <th>Наименование</th>
+                    <th>Цена</th>
+                    <th>Кол-во</th>
+                    <th>Итог</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><img class="cart__icon" src="images/icons/icons.svg#recycle" alt="" /></td>
+                    <td>
+                      <img src="images/goods/C4064.jpg" alt="" />
+                    </td>
+                    <td>
+                      <a href="#">Колодки задн.Iveco Daily 99--/ 2006--</a>
+                    </td>
+                    <td>350л</td>
+                    <td>
+                      <div class="good-info__btn">
+                        <form class="good__quant">
+                          <button class="good__quant-minus good__quant-btn" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">
+                            -
+                          </button>
+                          <input class="good-info__btn-quantity" type="number" size="2" name="quantity " min="1" max="99" value="1" required />
+                          <button class="good__quant-plus good__quant-btn" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">
+                            +
+                          </button>
+                        </form>
+                      </div>
+                    </td>
+                    <td>350л</td>
+                  </tr>
+                  <tr>
+                    <td><img class="cart__icon" src="images/icons/icons.svg#recycle" alt="" /></td>
+                    <th scope="row">
+                      <a href="#"><img src="images/goods/dls.png" alt="" /></a>
+                    </th>
+                    <td><a href="#" class="modal-link">IGAT PLATIN DLS SAE 5W-30 (5L)</a></td>
+                    <td>350л</td>
+                    <td>
+                      <div class="good-info__btn">
+                        <form class="good__quant">
+                          <button class="good__quant-minus good__quant-btn" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">
+                            -
+                          </button>
+                          <input class="good-info__btn-quantity" type="number" size="2" name="quantity " min="1" max="99" value="1" required />
+                          <button class="good__quant-plus good__quant-btn" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">
+                            +
+                          </button>
+                        </form>
+                      </div>
+                    </td>
+                    <td>350л</td>
+                  </tr>
+                  <tr>
+                    <td><img class="cart__icon" src="images/icons/icons.svg#recycle" alt="" /></td>
+                    <th scope="row">
+                      <a href="#"><img src="images/goods/477.png" alt="" /></a>
+                    </th>
+                    <td><a href="#" class="modal-link">LLB477 12v 55w H7</a></td>
+                    <td>350л</td>
+                    <td>
+                      <div class="good-info__btn">
+                        <form class="good__quant">
+                          <button class="good__quant-minus good__quant-btn" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">
+                            -
+                          </button>
+                          <input class="good-info__btn-quantity" type="number" size="2" name="quantity " min="1" max="99" value="1" required />
+                          <button class="good__quant-plus good__quant-btn" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">
+                            +
+                          </button>
+                        </form>
+                      </div>
+                    </td>
+                    <td>350л</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- table -->
+              <div class="cart__table-footer">
+                <a href="#" class="cart__table-footer--shop">Вернуться к покупкам</a>
+                <a href="#">Очистить корзину</a>
+              </div>
+            </div>
+            <div class="cart__total">
+              <div class="cart__total-data">
+                <span class="cart__total-left">Количество:</span>
+                <span class="cart__total-right">3 шт</span>
+              </div>
+              <div class="cart__total-divider"></div>
+              <div class="cart__total-data">
+                <span class="cart__total-left">Стоимость товаров:</span>
+                <span class="cart__total-right">5124л</span>
+              </div>
+              <div class="cart__total-all">
+                <span class="cart__total-left">Итого:</span>
+                <span>5124л</span>
+              </div>
+              <button class="button cart__total-btn">Оформить заказ</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      @@include('_footer.html')
+    </div>
+    <!-- /.wrapper in header.html -->
+    <!-- подключение скриптов -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

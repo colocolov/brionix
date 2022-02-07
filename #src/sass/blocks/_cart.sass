@@ -1,0 +1,142 @@
+.cart
+  margin-bottom: 100px
+  &__heading
+    margin-bottom: 55px
+  &__wrap
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+  &__info
+    width: 730px
+  &__icon
+    width: 60px
+    height: 19px
+  &__table
+    thead
+      padding-bottom: 20px
+      border-style: none
+      border-bottom: 1px solid $table
+      tr
+        border-style: none
+      th
+        position: relative
+        font-family: "MuseoSansCyrl-500"
+        font-weight: 500
+        font-size: 18px
+        line-height: 24px
+        text-align: center
+        color: $black
+        // border-bottom: none
+        padding: 10px 25px 25px
+        &:nth-child(n+4)
+          &::before
+            position: absolute
+            content: ''
+            // display: block
+            top: 0
+            left: 0
+            height: 40px
+            width: 1px
+            background-color: $table
+    tbody
+      tr
+        border-style: none
+        border-color: transparent
+        // padding-top: 25px
+      td
+        position: relative
+        padding: 25px
+        vertical-align: middle
+        font-family: "MuseoSansCyrl-300"
+        font-weight: 300
+        font-size: 16px
+        line-height: 22px
+        color: $black
+        &:first-child
+          padding: 0
+        &:nth-child(n+4)
+          &::before
+            position: absolute
+            content: ''
+            // display: block
+            top: 50%
+            transform: translateY(-50%)
+            left: 0
+            height: 40px
+            width: 1px
+            background-color: $table
+        a
+          transition: color 0.3s
+        & .good__quant
+          width: 100px
+        & .good__quant input[type="number"]
+          width: 95px
+          height: 40px
+        & .good__quant-plus
+          left: 70px
+        & .good-info__btn-quantity
+          box-shadow: none
+          border: 1px solid $table
+          font-size: 16px
+        & .good__quant-btn
+          border: 1px solid $table
+          border-radius: 2px
+    &-footer
+      border-top: 1px solid $table
+      display: flex
+      font-family: 'Raleway-Regular'
+      font-weight: 400
+      justify-content: space-between
+      padding-top: 15px
+      font-size: 16px
+      color: $black
+      a
+        transition: color 0.3s
+      &--shop
+        font-size: 18px
+
+  &__total
+    width: 380px
+    background-color: $grey
+    border-radius: 5px
+    padding: 35px 25px
+    flex-shrink: 0
+    &-data
+      display: flex
+      justify-content: space-between
+      margin: 0 5px 25px
+      font-family: 'Montserrat-Medium', sans-serif
+      font-weight: 700
+      font-size: 18px
+      line-height: 24px
+      color: #2E2E2E
+    &-all
+      display: flex
+      justify-content: space-between
+      margin: 40px 5px
+      font-family: 'Montserrat-Medium', sans-serif
+      font-weight: 700
+      font-size: 24px
+      line-height: 32px
+      color: $black
+    &-divider
+      background-color: rgba(53, 64, 83, 0.5)
+      height: 1px
+      margin-bottom: 25px
+    &-right
+      font-weight: 300
+      font-size: 16px
+    &-btn
+      background-color: $red
+      border-radius: 5px
+      width: 100%
+      color: $bgc
+      padding: 16px
+      text-transform: uppercase
+      font-family: "Raleway-Medium"
+      font-weight: 500
+      font-size: 18px
+      line-height: 24px
+      letter-spacing: 0.2px
+      transition: background-color 0.3s

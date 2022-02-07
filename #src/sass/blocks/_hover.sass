@@ -153,6 +153,7 @@
           left: 0
     &-info__btn-cart
       &:hover
+        background-color: darken($red,10%)
         &::before
           transition: all 1s
           transform: scale(1.10)
@@ -162,6 +163,16 @@
       &:hover
         background: $grey
   .pagination-list__item a
+    &:hover
+      color: $red
+
+  .cart__total-btn
+    &:hover
+      background-color: darken($red,10%)
+  .cart__table a
+    &:hover
+      color: $red
+  .cart__table-footer a
     &:hover
       color: $red
 

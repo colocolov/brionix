@@ -141,13 +141,68 @@
         <div class="container">
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__list-item"><a href="index.html">Главная</a></li>
-            <li class="breadcrumbs__list-item"><a href="catalog.html">Каталог товаров</a></li>
-            <li class="breadcrumbs__list-item"><a href="#">Автомасла</a></li>
-            <li class="breadcrumbs__list-item">IGAT PLATIN DLS SAE 5W-30 (5L)</li>
+            <li class="breadcrumbs__list-item">Корзина</li>
           </ul>
         </div>
       </div>
       <!-- /.breadcrumbs -->
+
+      <section class="cart">
+        <div class="container">
+          <div class="cart__info">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Корзина</h5>
+              </div>
+              <div class="modal-body">
+                <!-- table -->
+                <table class="table text-start modal-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Фото</th>
+                      <th scope="col">Наименование</th>
+                      <th scope="col">Кол-во</th>
+                      <th scope="col">Цена</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <a href="#"><img src="images/goods/C4064.jpg" alt="" /></a>
+                      </th>
+                      <td><a href="#" class="modal-link">Колодки задн.Iveco Daily 99--/ 2006--</a></td>
+                      <td>1</td>
+                      <td>350л</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <a href="#"><img src="images/goods/dls.png" alt="" /></a>
+                      </th>
+                      <td><a href="#" class="modal-link">IGAT PLATIN DLS SAE 5W-30 (5L)</a></td>
+                      <td>1</td>
+                      <td>850л</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <a href="#"><img src="images/goods/477.png" alt="" /></a>
+                      </th>
+                      <td><a href="#" class="modal-link">LLB477 12v 55w H7</a></td>
+                      <td>1</td>
+                      <td>45л</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- table -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="button modal__button-go" data-bs-dismiss="modal">Продолжить покупки</button>
+                <button type="button" class="button modal__button-order">Оформить заказ</button>
+              </div>
+            </div>
+            <div class="cart__total">2223</div>
+          </div>
+        </div>
+      </section>
 
       <section class="good">
         <div class="container">
@@ -181,18 +236,9 @@
               <div class="good-info__btn">
                 <form class="good__quant">
                   <button class="good__quant-minus good__quant-btn" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-                  <input
-                    class="good-info__btn-quantity"
-                    type="number"
-                    size="2"
-                    name="quantity "
-                    min="1"
-                    max="99"
-                    value="1"
-                    required
-                  />
+                  <input class="good-info__btn-quantity" type="number" size="2" name="quantity " min="1" max="99" value="1" required />
                   <button class="good__quant-plus good__quant-btn" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
-                  <button class="link__button2 good-info__btn-cart" type="submit" >Добавить в корзину</button>
+                  <button class="link__button2 good-info__btn-cart" type="submit">Добавить в корзину</button>
                 </form>
               </div>
             </div>
@@ -201,155 +247,6 @@
         </div>
       </section>
       <!-- /.good -->
-
-      <section class="characteristics"">
-        <div class="container">
-          <ul class="characteristics__tabs">
-            <li class="characteristics__tab">О товаре</li>
-            <li class="characteristics__tab characteristics__tab_active">Характеристики</li>
-            <li class="characteristics__tab">Отзывы</li>
-          </ul>
-        </div>
-        <div class="characteristics__wrapper">
-          <div class="container">
-            <div class="characteristics__info">
-              <p class="characteristics__text">
-                Высокоэкономичное, высокопроизводительное моторное масло, специально разработанное для современных
-                транспортных средств, для которых требуется масло класса SAE 0W-20.
-              </p>
-              <p class="characteristics__text">
-                PLATIN SRS HC SAE 0W-20 представляет собой специально разработанное для современных бензиновых
-                двигателей высокопроизводительное моторное масло, изготовленное на основе специальной композиции
-                HC-Synthese масел и полностью синтетических ПАО (полиальфаолефины).
-              </p>
-            </div>
-            <!-- /.characteristics__text -->
-
-            <div class="characteristics__info characteristics__info_active">
-              <div class="characteristics__element">
-                <div class="characteristics__element-left">Объем, л:</div>
-                <div class="characteristics__element-right">1</div>
-              </div>
-              <div class="characteristics__element">
-                <div class="characteristics__element-left">Состав масла:</div>
-                <div class="characteristics__element-right">минеральное</div>
-              </div>
-              <div class="characteristics__element">
-                <div class="characteristics__element-left">Спецификация:</div>
-                <div class="characteristics__element-right">4044611013413</div>
-              </div>
-              <div class="characteristics__element">
-                <div class="characteristics__element-left">Допуски:</div>
-                <div class="characteristics__element-right">ACEA A5/B5 | API SN/CF</div>
-              </div>
-              <div class="characteristics__element">
-                <div class="characteristics__element-left">Спецификация:</div>
-                <div class="characteristics__element-right">4044611013413</div>
-              </div>
-              <div class="characteristics__element">
-                <div class="characteristics__element-left">Допуски:</div>
-                <div class="characteristics__element-right">ACEA A5/B5 | API SN/CF</div>
-              </div>
-            </div>
-            <div class="characteristics__info">Вкладка с отзывами</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="favorites">
-        <div class="container">
-          <div class="favorites__wrapper">
-            <div class="favorites__top">
-              <h2 class="heading good-favorites__heading">С этим товаром покупают</h2>
-              <div class="favorites__nav">
-                <div class="swiper-button-prev favorites__nav--left"></div>
-                <div class="swiper-button-next favorites__nav--right"></div>
-              </div>
-            </div>
-            <div class="swiper-container favorites__content">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="favorites__item">
-                    <div class="favorites__labels">
-                      <span class="favorites__new">Новинка</span>
-                      <span class="favorites__hit">Хит</span>
-                    </div>
-                    <div class="favorites__image">
-                      <a href="tovar.html"><img class="favorites__img" src="images/goods/rowe.png" alt="" /></a>
-                    </div>
-                    <a href="tovar.html"><h3 class="favorites__title">HIGHTEC SYNT RSF 950 SAE 0W-30</h3></a>
-                    <div class="favorites__cart">
-                      <span class="favorites__price">1000 л</span>
-                      <a class="favorites__button" href="#"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="favorites__item">
-                    <div class="favorites__labels">
-                      <span class="favorites__hit">Хит</span>
-                    </div>
-                    <div class="favorites__image">
-                      <a href="tovar.html"><img class="favorites__img" src="images/goods/dls.png" alt="" /></a>
-                    </div>
-                    <a href="tovar.html"><h3 class="favorites__title">IGAT PLATIN DLS SAE 5W-30 (5L)</h3></a>
-                    <div class="favorites__cart">
-                      <span class="favorites__price">890 л</span>
-                      <a class="favorites__button" href="#"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="favorites__item">
-                    <div class="favorites__image">
-                      <a href="tovar.html"><img class="favorites__img" src="images/goods/477.png" alt="" /></a>
-                    </div>
-                    <a href="tovar.html"><h3 class="favorites__title">LLB477 12v 55w H7</h3></a>
-                    <div class="favorites__cart">
-                      <span class="favorites__price">55 л</span>
-                      <a class="favorites__button" href="#"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="favorites__item">
-                    <div class="favorites__labels">
-                      <span class="favorites__hit">Хит</span>
-                    </div>
-                    <div class="favorites__image">
-                      <a href="tovar.html"><img class="favorites__img" src="images/goods/C4064.jpg" alt="" /></a>
-                    </div>
-                    <a href="tovar.html"><h3 class="favorites__title">Колодки задн.Iveco Daily 99--/ 2006--</h3></a>
-                    <div class="favorites__cart">
-                      <span class="favorites__price">355 л</span>
-                      <a class="favorites__button" href="#"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="favorites__item">
-                    <div class="favorites__labels">
-                      <span class="favorites__new">Новинка</span>
-                      <span class="favorites__hit">Хит</span>
-                    </div>
-                    <div class="favorites__image">
-                      <a href="tovar.html"><img class="favorites__img" src="images/goods/rowe.png" alt="" /></a>
-                    </div>
-                    <a href="tovar.html"><h3 class="favorites__title">HIGHTEC SYNT RSF 950 SAE 0W-30</h3></a>
-                    <div class="favorites__cart">
-                      <span class="favorites__price">1000 л</span>
-                      <a class="favorites__button" href="#"></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- /.swiper-wrapper -->
-            </div>
-            <!-- /.favorites__content -->
-          </div>
-        </div>
-      </section>
-      <!-- /.favorites -->
 
       <footer class="footer">
   <div class="footer__content">
