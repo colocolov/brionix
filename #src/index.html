@@ -12,6 +12,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="tophead-slider__item">
+                  <button class="tophead__btn btn-reset btn">Посмотреть товар</button>
                   <img class="swiper-lazy" src="images/sliders/01.jpg" alt="слайдер" />
                   <!-- <div class="swiper-lazy-preloader"></div> -->
                 </div>
@@ -19,7 +20,8 @@
               <!-- /.swiper-slide -->
               <div class="swiper-slide">
                 <div class="tophead-slider__item">
-                  <img class="swiper-lazy" src="images/sliders/01.jpg" alt="слайдер" />
+                  <button class="tophead__btn btn-reset btn">Перейти</button>
+                  <img class="swiper-lazy" src="https://mobimg.b-cdn.net/v3/fetch/5a/5a1990d39181006d97036d8ba802b48a.jpeg" alt="слайдер" />
                   <!-- <div class="swiper-lazy-preloader"></div> -->
                 </div>
               </div>
@@ -44,49 +46,61 @@
 
       <h1 class="heading unvisible">Интренет-магазин автозапчестей в Молдове</h1>
 
-      <section class="category">
+      <section class="category category-fon">
         <div class="container">
-          <div class="category__head">
+          <div class="category__top">
             <h2 class="heading category__title">Каталог</h2>
-            <button class="link__button category__button">Все категории</button>
+            <a href="category.html" class="link__button category__button">Все категории</a>
           </div>
           <div class="category__all">
             <ul class="category__list">
               <li class="category__item">
-                <div class="category__img">
-                  <img class="category__image" src="images/icons/oil.png" alt="Иконка масла" />
-                </div>
-                <a class="category__link" href="#">Автомобильные масла</a>
+                <a class="category__link" href="#">
+                  <div class="category__img">
+                    <img class="category__image" src="images/icons/oil.png" alt="Иконка масла" />
+                  </div>
+                  <span class="category__name">Автомобильные масла</span>
+                </a>
               </li>
               <li class="category__item">
-                <div class="category__img">
-                  <img class="category__image" src="images/icons/pads.png" alt="Иконка тормозного диска" />
-                </div>
-                <a class="category__link" href="#">Автомобильные колодки и диски</a>
+                <a class="category__link" href="#">
+                  <div class="category__img">
+                    <img class="category__image" src="images/icons/pads.png" alt="Иконка тормозного диска" />
+                  </div>
+                  <span class="category__name">Автомобильные колодки и диски</span>
+                </a>
               </li>
               <li class="category__item">
-                <div class="category__img">
-                  <img class="category__image" src="images/icons/filter.png" alt="Иконка фильтра" />
-                </div>
-                <a class="category__link" href="#">Фильтра</a>
+                <a class="category__link" href="#">
+                  <div class="category__img">
+                    <img class="category__image" src="images/icons/filter.png" alt="Иконка фильтра" />
+                  </div>
+                  <span class="category__name">Фильтра</span>
+                </a>
               </li>
               <li class="category__item">
-                <div class="category__img">
-                  <img class="category__image" src="images/icons/bulbs.png" alt="Иконка лампочек" />
-                </div>
-                <a class="category__link" href="#">Автомобильные лампы</a>
+                <a class="category__link" href="#">
+                  <div class="category__img">
+                    <img class="category__image" src="images/icons/bulbs.png" alt="Иконка лампочек" />
+                  </div>
+                  <span class="category__name">Автомобильные лампы</span>
+                </a>
               </li>
               <li class="category__item">
-                <div class="category__img">
-                  <img class="category__image" src="images/icons/wipers.png" alt="Иконка стеклоочистителей" />
-                </div>
-                <a class="category__link" href="#">Стеклоочистители</a>
+                <a class="category__link" href="#">
+                  <div class="category__img">
+                    <img class="category__image" src="images/icons/wipers.png" alt="Иконка стеклоочистителей" />
+                  </div>
+                  <span class="category__name">Стеклоочистители</span>
+                </a>
               </li>
               <li class="category__item">
-                <div class="category__img">
-                  <img class="category__image" src="images/icons/himia.png" alt="Иконка химии" />
-                </div>
-                <a class="category__link" href="#">Автохимия</a>
+                <a class="category__link" href="#">
+                  <div class="category__img">
+                    <img class="category__image" src="images/icons/himia.png" alt="Иконка химии" />
+                  </div>
+                  <span class="category__name">Автохимия</span>
+                </a>
               </li>
             </ul>
           </div>
@@ -107,76 +121,75 @@
             <div class="swiper-container favorites__content">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="favorites__item">
-                    <div class="favorites__labels">
-                      <span class="favorites__new">Новинка</span>
-                      <span class="favorites__hit">Хит</span>
+                  <div class="product__item">
+                    <div class="product__labels">
+                      <span>Новинка</span>
                     </div>
-                    <div class="favorites__image">
-                      <a href="tovar.html"><img class="favorites__img" src="images/goods/rowe.png" alt="" /></a>
+                    <div class="product__image">
+                      <a href="tovar.html"><img class="product__img" src="images/goods/rowe.png" alt="" /></a>
                     </div>
-                    <a href="tovar.html"><h3 class="favorites__title">HIGHTEC SYNT RSF 950 SAE 0W-30</h3></a>
-                    <div class="favorites__cart">
-                      <span class="favorites__price">1000 л</span>
-                      <a class="favorites__button" href="#"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="favorites__item">
-                    <div class="favorites__labels">
-                      <span class="favorites__hit">Хит</span>
-                    </div>
-                    <div class="favorites__image">
-                      <a href="tovar.html"><img class="favorites__img" src="images/goods/dls.png" alt="" /></a>
-                    </div>
-                    <a href="tovar.html"><h3 class="favorites__title">IGAT PLATIN DLS SAE 5W-30 (5L)</h3></a>
-                    <div class="favorites__cart">
-                      <span class="favorites__price">890 л</span>
-                      <a class="favorites__button" href="#"></a>
+                    <a href="tovar.html"><h3 class="product__title">HIGHTEC SYNT RSF 950 SAE 0W-30</h3></a>
+                    <div class="product__cart">
+                      <span class="product__price">1000 л</span>
+                      <a class="product__button" href="#"></a>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="favorites__item">
-                    <div class="favorites__image">
-                      <a href="tovar.html"><img class="favorites__img" src="images/goods/477.png" alt="" /></a>
+                  <div class="product__item">
+                    <div class="product__labels">
+                      <span class="product__hit">Хит</span>
                     </div>
-                    <a href="tovar.html"><h3 class="favorites__title">LLB477 12v 55w H7</h3></a>
-                    <div class="favorites__cart">
-                      <span class="favorites__price">55 л</span>
-                      <a class="favorites__button" href="#"></a>
+                    <div class="product__image">
+                      <a href="tovar.html"><img class="product__img" src="images/goods/dls.png" alt="" /></a>
                     </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="favorites__item">
-                    <div class="favorites__labels">
-                      <span class="favorites__hit">Хит</span>
-                    </div>
-                    <div class="favorites__image">
-                      <a href="tovar.html"><img class="favorites__img" src="images/goods/C4064.jpg" alt="" /></a>
-                    </div>
-                    <a href="tovar.html"><h3 class="favorites__title">Колодки задн.Iveco Daily 99--/ 2006--</h3></a>
-                    <div class="favorites__cart">
-                      <span class="favorites__price">355 л</span>
-                      <a class="favorites__button" href="#"></a>
+                    <a href="tovar.html"><h3 class="product__title">IGAT PLATIN DLS SAE 5W-30 (5L)</h3></a>
+                    <div class="product__cart">
+                      <span class="product__price">890 л</span>
+                      <a class="product__button" href="#"></a>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="favorites__item">
-                    <div class="favorites__labels">
-                      <span class="favorites__new">Новинка</span>
-                      <span class="favorites__hit">Хит</span>
+                  <div class="product__item">
+                    <div class="product__image">
+                      <a href="tovar.html"><img class="product__img" src="images/goods/477.png" alt="" /></a>
                     </div>
-                    <div class="favorites__image">
-                      <a href="tovar.html"><img class="favorites__img" src="images/goods/rowe.png" alt="" /></a>
+                    <a href="tovar.html"><h3 class="product__title">LLB477 12v 55w H7</h3></a>
+                    <div class="product__cart">
+                      <span class="product__price">55 л</span>
+                      <a class="product__button" href="#"></a>
                     </div>
-                    <a href="tovar.html"><h3 class="favorites__title">HIGHTEC SYNT RSF 950 SAE 0W-30</h3></a>
-                    <div class="favorites__cart">
-                      <span class="favorites__price">1000 л</span>
-                      <a class="favorites__button" href="#"></a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product__item">
+                    <div class="product__labels">
+                      <span class="product__hit">Хит</span>
+                    </div>
+                    <div class="product__image">
+                      <a href="tovar.html"><img class="product__img" src="images/goods/C4064.jpg" alt="" /></a>
+                    </div>
+                    <a href="tovar.html"><h3 class="product__title">Колодки задн.Iveco Daily 99--/ 2006--</h3></a>
+                    <div class="product__cart">
+                      <span class="product__price">355 л</span>
+                      <a class="product__button" href="#"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product__item">
+                    <div class="product__labels">
+                      <span class="product__new">Новинка</span>
+                      <span class="product__hit">Хит</span>
+                    </div>
+                    <div class="product__image">
+                      <a href="tovar.html"><img class="product__img" src="images/goods/rowe.png" alt="" /></a>
+                    </div>
+                    <a href="tovar.html"><h3 class="product__title">HIGHTEC SYNT RSF 950 SAE 0W-30</h3></a>
+                    <div class="product__cart">
+                      <span class="product__price">1000 л</span>
+                      <a class="product__button" href="#"></a>
                     </div>
                   </div>
                 </div>
@@ -193,9 +206,7 @@
         <div class="container">
           <div class="brends__text">
             <p class="brends__heading">Мы предлагаем товары ведущих брендов</p>
-            <p class="brends__subtitle">
-              Наш магазин насчитывает более чем 10000 товаров разных категорий. Все они показаны в катеогриях ниже
-            </p>
+            <p class="brends__subtitle">Наш магазин насчитывает более чем 10000 товаров разных категорий. Все они показаны в катеогриях ниже</p>
           </div>
           <!-- /.brends__text -->
           <div class="swiper-container brends__slider">

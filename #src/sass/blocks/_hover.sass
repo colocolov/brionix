@@ -1,80 +1,67 @@
 @media ( min-width: 992px )
-  .menu
-    &__link
+  .menu__item a
+    &:hover
+      color: $bl
       &::before
-        content: ''
-        position: absolute
-        width: 0
-        left: auto
-        background-color: $bl
-        height: 2px
-        bottom: -10px
-        right: 0
-        transition: all .3s
-      &:hover
-        color: $bl
-        &::before
-          width: 100%
-          right: auto
-          left: 0
+        width: 100%
+        right: auto
+        left: 0
 
   .navbar
-    &__phone
-      &:hover
-        transition: all .2s
-        color: $red
-    &__link
-      &:hover
-        transition: all .3s
-        color: $red
+    &__phone:hover
+      color: $red
+    &__item a:hover
+      color: $red
 
   .button--entry
     &:hover
-      transition: all .3s
       color: $red
 
-  .breadcrumbs__list-item
-    a
-      &:hover
-        transition: all .3s
-        color: $bl
+  .breadcrumbs__list
+    a:hover
+      color: $bl
 
   .category-top
-    &__link
-      &:hover
-        transition: all .3s
-        color: $bgc
     &__item
       &:hover
-        transition: all .3s
         background-color: $red
+        .category-top__img
+          fill: #fff
+      a:hover
+        color: $bgc
 
   .category
     &__item
       &:hover
-        transition: all 0.3s
+        transition: all 0.5s
         transform: scale(1.02)
-        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15))
+        filter: drop-shadow(3px 3px 10px rgba(50, 50, 50, 0.15))
         background-color: $red
         color: $bgc
-    &__link
-      &:hover
-        transition: all .3s
-        color: $bgc
+        & .category__name
+          color: $bgc
+
+  .category__card:hover
+    transition: all 0.5s
+    //filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15))
+    filter: drop-shadow(3px 3px 10px rgba(50, 50, 50, 0.15))
+    & .category__icon
+      transform: scale(1.02)
+    & .category__head
+      color: $red
 
   .link__button
     &:hover
-      transition: all 0.3s
       color: $bgc
       //filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15))
       &::before
         transition: all 0.3s
         right: 22px
 
-  .favorites
+  .product
     &__item
       &:hover
-        transition: all 0.3s
+        transition: all 0.5s
         filter: drop-shadow(3px 3px 10px rgba(50, 50, 50, 0.15))
         color: $red
     &-goods__item
@@ -92,7 +79,7 @@
         background: $red url('../images/icons/icons.svg#cart-white') no-repeat center center
         width: 36px
         height: 36px
-  .favorites__item:hover .favorites__title, .favorites__item:hover .favorites__price, .favorites-goods__item:hover .favorites__title
+  .product__item:hover .product__title, .product__item:hover .product__price, .product-goods__item:hover .product__title
     transition: all 0.3s
     color: $red
   .favorites__nav--left.swiper-button-prev:hover
@@ -134,7 +121,7 @@
     &-photos__img
       &:hover
         transform: scale(1.02)
-    &-info__brend-link
+    &-info__about a
       &::before
         content: ''
         position: absolute
@@ -177,9 +164,10 @@
       color: $red
 
   .footer
-    &__link
-      &:hover
-        color: $red
+    &__list-item a:hover,
+      color: $red
+      svg
+        fill: $red
     &__social-link
       &:hover
         background-color: $red

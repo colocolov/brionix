@@ -95,7 +95,7 @@ function js() {
   return src(path.src.js)
     .pipe(fileinclude())
     .pipe(dest(path.build.js))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(
       rename({
         extname: ".min.js",

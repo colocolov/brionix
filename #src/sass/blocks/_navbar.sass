@@ -10,6 +10,7 @@
     @extend %text-title
     padding-left: 30px
     font-weight: 700
+    transition: all 0.3s ease
     &::after
       content: ''
       position: absolute
@@ -34,11 +35,12 @@
           content: '|'
           padding-left: 2px
           color: $black
-  &__link
-    color: $black
-    cursor: pointer
-    &-active
-      font-weight: 700
+    a
+      color: $black
+      cursor: pointer
+      transition: all 0.3s ease
+      &._active
+        font-weight: 700
 .menu
   &__list
     font-family: 'Raleway-Regular', sans-serif
@@ -47,12 +49,23 @@
     line-height: 20px
     display: flex
   &__item
-    position: relative
+    // position: relative
+    a
+      position: relative
+      color: $black
+      cursor: pointer
+      transition: all .3s
+      &::before
+        content: ''
+        position: absolute
+        width: 0
+        // left: auto
+        background-color: $bl
+        height: 2px
+        bottom: -11px
+        // right: 0
   &__item:not(:last-child)
     margin-right: 38px
-  &__link
-    color: $black
-    cursor: pointer
 
 .button
   padding: 10px 15px
@@ -82,7 +95,7 @@
       position: relative
     &-input
       background-color: $bgc
-      border: none
+      border: 1px solid transparent
       padding: 12px 105px 12px 25px
       border-radius: 5px
       width: 100%
@@ -140,23 +153,29 @@
     // justify-content: space-between
     align-items: center
   &__item
+    flex-grow: 1
     cursor: pointer
     border-left: 1px solid $bll
+    transition: all .3s
     &:last-child
       border-right: 1px solid $bll
-  &__link
-    padding: 14px 16px
-    display: flex
-    align-items: center
-    font-family: 'Raleway-Regular'
-    font-weight: 400
-    font-size: 18px
-    line-height: 20px
-    color: $black
+    a
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 14px 16px
+      font-family: 'Raleway-Regular'
+      font-weight: 400
+      font-size: 18px
+      line-height: 20px
+      color: $black
     // text-transform: uppercase
   &__link picture
     height: 15px
   &__img
-    height: 15px
+    height: 19px
+    width: 25px
     display: inline-block
     margin-right: 3px
+    fill: $bl
+

@@ -1,7 +1,17 @@
 // слайдер на главной
-var headerSlider = new Swiper(".tophead-slider", {
+const headerSlider = new Swiper(".tophead-slider", {
   autoplay: {
     delay: 3000,
+  },
+  on: {
+    init() {
+      this.el.addEventListener("mouseenter", () => {
+        this.autoplay.stop();
+      });
+      this.el.addEventListener("mouseleave", () => {
+        this.autoplay.start();
+      });
+    },
   },
   //скорость переключения слайдов
   speed: 800,
@@ -28,7 +38,7 @@ var headerSlider = new Swiper(".tophead-slider", {
 //-----
 
 // слайдер популярных товаров
-var favoritesSlider = new Swiper(".favorites__content", {
+const favoritesSlider = new Swiper(".favorites__content", {
   speed: 800,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -41,16 +51,52 @@ var favoritesSlider = new Swiper(".favorites__content", {
 //-----
 
 // слайдер брендов
-var headerSlider = new Swiper(".brends__slider", {
+const brendSlider = new Swiper(".brends__slider", {
   loop: true,
   autoplay: {
     delay: 3000,
   },
+  pauseOnMouseEnter: true,
   speed: 800,
   slidesPerView: 5,
   spaceBetween: 20,
 });
 //-----
+
+// скрытие кнопки добавить в корзину
+const btnAddCart = document.querySelector('.product__cart a');
+if (btnAddCart) {
+
+  btnAddCart.onclick = function (){
+    setTimeout(function() {
+      btnAddCart.style.display = "none";
+      const isAdd = document.querySelector('.added_to_cart');
+    }, 1000);
+  };
+  
+};
+
+(function ($) {
+  "use strict";
+
+// полсчет кол-ва товара для корзины
+  $('.good-info__quantity .good-info__quantity-minus, .good-info__quantity .good-info__quantity-plus').on('click', function (e) {
+    e.preventDefault();
+    var button = $(this);
+    // console.log(button);
+    // console.log(button.parent().parent());
+    var oldValue = button.parent().parent().find('input').val();
+    if (button.hasClass('good-info__quantity-plus')) {
+      var newVal = parseFloat(oldValue) + 1;
+    } else {
+      if (oldValue > 1) {
+        var newVal = parseFloat(oldValue) - 1;
+      } else {
+        newVal = 1;
+      }
+    }
+    button.parent().parent().find('input').val(newVal);
+  });
 
 $(document).ready(function () {
   // табы для товара
@@ -120,5 +166,7 @@ $(document).ready(function () {
   });
   // -----
 
-  // end JQ
 });
+
+// end JQ
+})(jQuery);

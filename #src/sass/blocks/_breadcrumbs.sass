@@ -6,17 +6,18 @@
   &__list
     display: flex
     align-items: center
-    &-item
-      font-family: "Raleway-Regular"
-      font-weight: 400
-      font-size: 14px
-      line-height: 16px
+    font-family: "Raleway-Regular"
+    font-weight: 400
+    font-size: 14px
+    line-height: 16px
+    a
       color: $bll
-      &:last-child
-        color: $black
-      &:not(:last-child)
-        &::after
-          content: ' /'
-          margin-right: 4px
-      a
-        color: inherit
+      transition: color 0.3s ease
+    &:last-child
+      color: $black
+      // &:not(:last-child)
+      //   &::after
+      //     content: ' /'
+      //     margin-right: 4px
+      // a
+      //   color: inherit

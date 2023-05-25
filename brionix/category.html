@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/jquery.formstyler.css" />
+  <link rel="stylesheet" href="css/jquery.formstyler.theme.css" />
+  <link rel="stylesheet" href="css/ion.rangeSlider.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- подключение favicon -->
+  <title>Brionix</title>
+</head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+  <div class="container">
+    <div class="navbar">
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item"><a href="#">О нас</a></li>
+          <li class="menu__item"><a href="catalog.html">Каталог</a></li>
+          <li class="menu__item"><a href="#">Новости</a></li>
+          <li class="menu__item"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar__info">
+        <a class="navbar__phone" href="tel:+37379332222">+373 79 33 2222</a>
+      </div>
+
+      <div class="navbar__data">
+        <ul class="navbar__list">
+          <li class="navbar__item navbar__item-lang">
+            <a class="_active" href="index.html">RU</a>
+          </li>
+          <li class="navbar__item navbar__item-lang">
+            <a href="index-md.html">MD</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar__auth">
+        <button class="button button--entry">Войти</button>
+        <button class="button button--registration">Регистрация</button>
+      </div>
+    </div>
+    <!-- шапка -->
+  </div>
+  <!-- /.container -->
+  <div class="top">
+    <div class="container">
+      <div class="top__inner">
+        <div class="logo top__logo">
+          <a class="top__logo-link" href="/">
+            <img class="logo top__logo-img" src="images/logo_light.svg" alt="Лого: brionix.md" />
+          </a>
+        </div>
+        <div class="top__search">
+          <form class="search top__search-form" action="#">
+            <input class="top__search-input" type="search" placeholder="ищу ..." />
+            <button class="button top__search-button">поиск</button>
+          </form>
+        </div>
+        <div class="top__basket">
+          <a href="cart.html" class="top__basket-info">
+            <!-- data-bs-toggle="modal" data-bs-target="#modal-cart" -->
+            <span class="top__basket-title">В корзине</span>
+            <span class="top__basket-total">1 товар, 1250 л</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.top -->
+  <div class="category-top">
+    <div class="container">
+      <ul class="category-top__list">
+        <li class="category-top__item">
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#canister"></use>
+            </svg>
+            Масла
+          </a>
+        </li>
+        <li class="category-top__item">
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#pads"></use>
+            </svg>
+            Колодки
+          </a>
+        </li>
+        <li class="category-top__item">
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#bulbs"></use>
+            </svg>
+            Лампочки
+          </a>
+        </li>
+        <li class="category-top__item">
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#wipers"></use>
+            </svg>
+            Дворники
+          </a>
+        </li>
+        <li class="category-top__item">
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#antifreez"></use>
+            </svg>
+            Антифриз
+          </a>
+        </li>
+        <li class="category-top__item">
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#clamp"></use>
+            </svg>
+            Хомуты
+          </a>
+        </li>
+        <li class="category-top__item">
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#filter"></use>
+            </svg>
+            Фильтра
+          </a>
+        </li>
+        <li class="category-top__item">
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#himia"></use>
+            </svg>
+            Химия
+          </a>
+        </li>
+        <li class="category-top__item">
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#tires"></use>
+            </svg>
+            Скаты
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- /.category-top -->
+</header>
+
+
+      <div class="breadcrumbs">
+        <div class="container">
+          <nav class="breadcrumbs__list">
+            <a href="index.html">Главная</a>&nbsp;/&nbsp;
+            Каталог сайта
+          </nav>
+        </div>
+      </div>
+      <!-- /.breadcrumbs -->
+
+      <section class="category__wrapper">
+        <div class="container">
+          <h2 class="heading category__heading">Разделы</h2>
+          <div class="term-description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A commodi odit accusantium libero? Sit corrupti minima cumque ratione nulla ut, consequuntur iusto a. Blanditiis placeat voluptatum possimus dolores maiores! Alias.</p>
+          </div>
+          <div class="category__items">
+            <a href="#" class="category__card">
+              <div class="category__wrp">
+                <div class="category__icon">
+                  <img class="image " src="images/icons/oils.png" alt="">
+                </div>
+                <h2 class="category__head">Автомобильное масло</h2>
+              </div>
+            </a><!-- ./category__card -->
+            <a href="#" class="category__card">
+              <div class="category__wrp">
+                <div class="category__icon">
+                  <img class="image " src="images/icons/brakes.png" alt="">
+                </div>
+                <h2 class="category__head">Тормозные колодки и диски</h2>
+              </div>
+            </a><!-- ./category__card -->
+            <a href="#" class="category__card">
+              <div class="category__wrp">
+                <div class="category__icon">
+                  <img class="image " src="images/icons/bulbs.png" alt="">
+                </div>
+                <h2 class="category__head">Автолампы</h2>
+              </div>
+            </a><!-- ./category__card -->
+            <a href="#" class="category__card">
+              <div class="category__wrp">
+                <div class="category__icon">
+                  <img class="image " src="images/icons/dvorniki.png" alt="">
+                </div>
+                <h2 class="category__head">Дворники</h2>
+              </div>
+            </a><!-- ./category__card -->
+            <a href="#" class="category__card">
+              <div class="category__wrp">
+                <div class="category__icon">
+                  <img class="image " src="images/icons/filter.png" alt="">
+                </div>
+                <h2 class="category__head">Автомобильные фильтра</h2>
+              </div>
+            </a><!-- ./category__card -->
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+  <div class="footer__content">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__item">
+          <a class="footer__logo" href="/">
+            <img class="footer__logo-img" src="images/logo_dark.svg" alt="Лого: brionix.md" />
+          </a>
+          <ul class="footer__social">
+            <li class="footer__social-item">
+              <a class="footer__social-link footer__social-link--facebook" href="#" target="_blank"></a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link footer__social-link--instagram" href="#" target="_blank"></a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link footer__social-link--viber" href="#"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__item">
+          <h4 class="heading footer__heading">Компания</h4>
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="#">О нас</a></li>
+            <li class="footer__list-item"><a href="#">Новости</a></li>
+            <li class="footer__list-item"><a href="#">Оплата и доставка</a></li>
+            <li class="footer__list-item"><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__item">
+          <h4 class="heading footer__heading">Навигация сайта</h4>
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="#">Автомасла</a></li>
+            <li class="footer__list-item"><a href="#">Тормозные колодки и диски</a></li>
+            <li class="footer__list-item"><a href="#">Автолампы</a></li>
+            <li class="footer__list-item"><a href="#">Стеклоочистители</a></li>
+            <li class="footer__list-item"><a href="#">Антифриз</a></li>
+            <li class="footer__list-item"><a href="#">Хомуты</a></li>
+          </ul>
+        </div>
+        <div class="footer__item">
+          <h4 class="heading footer__heading">Контакты</h4>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <a class="footer__link footer__link-phone" href="tel:+37379223333">
+                <svg class="footer__list-icon" aria-hidden="true">
+                  <use xlink:href="images/icons/icons.svg#phone-white"></use>
+                </svg>+373 22 333 333
+              </a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__link" href="mailto:info@brionix.md">
+                <svg class="footer__list-icon" aria-hidden="true">
+                  <use xlink:href="images/icons/icons.svg#email-white"></use>
+                </svg>info@brionix.md
+              </a>
+            </li>
+            <li class="footer__list-item" target="_blank">
+              <a class="footer__link" href="#">
+                <svg class="footer__list-icon" aria-hidden="true">
+                  <use xlink:href="images/icons/icons.svg#geo-white"></use>
+                </svg>Chisinau, Uzinelor, 64
+              </a>
+            </li>
+            <li class="footer__list-item">
+              <div class="footer__link footer__link-hour">
+                <svg class="footer__list-icon" aria-hidden="true">
+                  <use xlink:href="images/icons/icons.svg#time"></use>
+                </svg>Режим работы: 9:00 - 17:00
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.footer__content -->
+  <div class="footer__copyright">
+    <div class="container">
+      <p class="footer__copyright-text">Интренет-магазин автозапчастей © 2021. Все права защищены.</p>
+    </div>
+  </div>
+  <!-- /.footer__copyright -->
+</footer>
+
+<!-- modal cart -->
+<div class="modal fade" id="modal-cart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Корзина</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- table -->
+        <table class="table text-start modal-table">
+          <thead>
+            <tr>
+              <th scope="col">Фото</th>
+              <th scope="col">Наименование</th>
+              <th scope="col">Кол-во</th>
+              <th scope="col">Цена</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <a href="#"><img src="images/goods/C4064.jpg" alt="" /></a>
+              </th>
+              <td><a href="#" class="modal-link">Колодки задн.Iveco Daily 99--/ 2006--</a></td>
+              <td>1</td>
+              <td>350л</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <a href="#"><img src="images/goods/dls.png" alt="" /></a>
+              </th>
+              <td><a href="#" class="modal-link">IGAT PLATIN DLS SAE 5W-30 (5L)</a></td>
+              <td>1</td>
+              <td>850л</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <a href="#"><img src="images/goods/477.png" alt="" /></a>
+              </th>
+              <td><a href="#" class="modal-link">LLB477 12v 55w H7</a></td>
+              <td>1</td>
+              <td>45л</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- table -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="button modal__button-go" data-bs-dismiss="modal">Продолжить покупки</button>
+        <button type="button" class="button modal__button-order">Оформить заказ</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /. modal cart -->
+
+    </div>
+    <!-- /.wrapper in header.html -->
+    <!-- подключение скриптов -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

@@ -6,11 +6,13 @@
   &-photos
     &__gallery
       display: grid
-      grid-template-columns: 400px 100px
-      grid-template-rows: repeat(3, 100px)
-      column-gap: 25px
-      row-gap: 50px
       margin-right: 100px
+      grid-template-columns: auto
+      grid-template-rows: auto
+      column-gap: 0
+      row-gap: 0
+      width: 525px
+
     &__big
       grid-row: 1/4
       grid-column: 1/2
@@ -38,105 +40,213 @@
       object-fit: cover
       transition: all 0.5s
   &-info
-    margin-right: 35px
+    // margin-right: 35px
     &__title
-      margin-bottom: 20px
+      margin-bottom: 50px
       font-size: 38px
       line-height: 42px
       &::before
         height: 0px
         background-color: none
-    &__code
-      margin-right: 60px
-      font-weight: 400
-      font-size: 14px
-      line-height: 14px
-      color: $bll
-    &__brend
-      font-weight: 400
-      font-size: 14px
-      line-height: 14px
-      color: $bll
-      &-link
-        position: relative
-        font-weight: 700
-        color: $red
+
+    &__wrap
+      display: flex
+      margin-bottom: 30px
+
     &__exist
-      margin-top: 15px
-      margin-bottom: 30px
-      @extend %body
-      color: #48943C
+      display: flex
+      flex: 1 0 200px
+      align-items: flex-end
       position: relative
-      padding-left: 15px
-      &::before
-        content: '✓'
-        width: 7px
-        height: 7px
-        // background-color: #48943C
-        // border-radius: 50%
-        top: 1px
-        left: -1px
+      border: 1px solid #E9E9E9
+      border-radius: 5px
+      padding: 42px 30px 26px 20px
+      margin-right: 30px
+      &-img
+        width: 24px
+        height: 24px
+      &-yes
+        display: flex
+        align-items: center
         position: absolute
-    &__exist-no
-      margin-top: 15px
-      margin-bottom: 30px
-      @extend %body
-      color: $red
-      position: relative
-      padding-left: 15px
-      &::before
-        content: ''
+        top: -18px
+        left: 30px
+        padding: 5px 13px
+        @extend %body
+        color: #48943C
+        font-size: 16px
+        border-radius: 5px
+        background: #F4FAF6
+        z-index: 3
+      &-no
+        display: flex
+        align-items: center
         position: absolute
-        top: 10px
-        left: 0
-        width: 15px
-        height: 15px
-        transform: rotate(45deg)
-        border-left: 2px solid $red
-      &::after
-        content: ''
-        position: absolute
-        top: 1px
-        left: 0
-        width: 15px
-        height: 15px
-        transform: rotate(-45deg)
-        border-left: 2px solid $red
-    &__price
-      margin-bottom: 40px
-      &-text
-        font-family: 'Raleway-Medium'
-        font-weight: 400
-        font-size: 12px
-        line-height: 1
+        top: -18px
+        left: 30px
+        padding: 5px 13px
+        @extend %body
         color: $bll
-      &-num
+        font-size: 16px
+        border-radius: 5px
+        background: #F6f6f6
+        z-index: 3
+
+    &__price
+      // margin-bottom: 40px
+      // &-text
+      //   font-family: 'Raleway-Medium'
+      //   font-weight: 400
+      //   font-size: 12px
+      //   line-height: 1
+      //   color: $bll
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      bdi
+        color: rgba(46,46,46,0.25)
         font-family: 'MuseoSansCyrl-700', sans-serif
         font-weight: 700
         font-size: 32px
         line-height: 1
         color: $black
-    &__btn
-      &-quantity
-        margin-right: 30px
-        text-align: center
-        border: none
-        width: 60px
-        height: 50px
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15)
-        border-radius: 5px
-        font-weight: 400
-        font-size: 22px
-        line-height: 24px
+        text-decoration: none
+      del
+        margin-bottom: -5px
+      del bdi
+        font-family: 'MuseoSansCyrl-300', sans-serif
+        font-weight: 300
+        font-size: 18px
+        line-height: 1.12
         color: $bll
+        text-align: end
+      ins
+        text-decoration: none
+      ins bdi
+        color: $red
+      & .price
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+
+    &__about
+      display: flex
+      flex: 1 0 250px
+      flex-direction: column
+      border: 1px solid #E9E9E9
+      border-radius: 5px
+      padding: 25px 30px
+      span:not(:last-child)
+        margin-bottom: 10px
+      span
+        // margin-right: 60px
+        font-weight: 400
+        font-size: 14px
+        line-height: 14px
+        color: $bll
+        a
+          position: relative
+          font-weight: 700
+          font-size: 14px
+          color: $red
+        &.sku
+          font-weight: 700
+          color: $bl
+
+    &__form
+      display: inline-flex
+      position: relative
+      // width: 650px
+      & input[type="number"]
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 50px
+        line-height: 22px
+        width: 160px
+        padding: 0
+        margin: 0
+        //text-align: center
+        -moz-appearance: textfield
+        -webkit-appearance: textfield
+        appearance: textfield
+        border: none
+        background: $grey
+      & input[type="number"]::-webkit-outer-spin-button,
+      & input[type="number"]::-webkit-inner-spin-button
+        display: none
+    &__quantity
+      display: flex
+      align-items: center
+      position: relative
+      width: 160px
+      margin: 0 auto
+      &-grup
+        position: absolute
+        top: 0px
+        bottom: 0px
+        overflow: hidden
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $red
+        outline: none
+        width: 50px
+        border-radius: 5px 0 0 5px
+        &-plus
+          right: 0
+          border-radius: 0 5px 5px 0
+        &-cart
+          width: 35px
       &-cart
-        background: url(../images/icons/icons.svg#cart-white) no-repeat 0 0, $red
-        background-size: 30px 30px
-        background-position: 14px 10px
+        height: 35px
+      &-btn
+        padding: 0
+        color: $bgc
+        border: none
+        font-size: 16px
+        font-weight: 700
+        outline: none
+        height: 100%
+        width: 100%
+        border: none
+        background-color: $red
+
+
+    &__input
+      text-align: center
+      border: none
+      width: 60px
+      height: 50px
+      border-radius: 5px
+      font-weight: 400
+      font-size: 22px
+      line-height: 24px
+      color: $black
+      overflow: hidden
+      &-cart
+        height: 100%
+        background-color: $grey
+        font-size: 18px
+        padding: 0 45px
+        width: 100px
+        flex-grow: 1
+
+    &__btn
+      &-img
+        height: 28px
+        width: 28px
+        display: inline-block
+        margin-right: 7px
+      &-cart
+        background: $red
+        // background: url(../images/icons/icons.svg#cart-white) no-repeat 0 0, $red
+        // background-size: 30px 30px
+        // background-position: 14px 10px
         border-radius: 3px
         height: 50px
-        padding-left: 55px
-        padding-right: 25px
+        padding: 0 30px
         margin-left: 35px
         border: none
         @extend %text-title
@@ -149,42 +259,4 @@
   &-favorites__heading
     font-size: 24px
 
-  &__quant
-    display: inline-flex
-    position: relative
-    // width: 650px
-    & input[type="number"]
-      display: flex
-      height: 50px
-      line-height: 22px
-      width: 110px
-      padding: 0
-      margin: 0
-      text-align: center
-      -moz-appearance: textfield
-      -webkit-appearance: textfield
-      appearance: textfield
-    & input[type="number"]::-webkit-outer-spin-button,
-    & input[type="number"]::-webkit-inner-spin-button
-      display: none
-    &-btn
-      position: absolute
-      top: 0px
-      bottom: 0px
-      width: 30px
-      padding: 0
-      display: flex
-      align-items: center
-      justify-content: center
-      color: rgba(46,46,46,.5)
-      border: none
-      font-size: 16px
-      font-weight: 500
-      overflow: hidden
-      cursor: pointer
-    &-minus
-      left: 0px
-      border-right: 1px solid rgba(46,46,46,.1)
-    &-plus
-      left: 80px
-      border-left: 1px solid rgba(46,46,46,.1)
+

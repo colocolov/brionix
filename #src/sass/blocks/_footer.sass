@@ -58,21 +58,23 @@
       &:not(:last-child)
         margin-bottom: 10px
     &-icon
-      width: 25px
-      height: 25px
+      display: inline-block
+      width: 20px
+      height: 20px
       margin-right: 5px
-  &__link
-    font-family: 'Raleway-Regular', sans-serif
-    font-weight: 400
-    font-size: 16px
-    line-height: 22px
-    color: $grey
-    transition: all 0.3s
-    &-phone
-      font-family: 'Raleway-Bold', sans-serif
-      font-weight: 700
-    &-hour
+      fill: $grey
+    a
+      font-family: 'Raleway-Regular', sans-serif
+      font-weight: 400
       font-size: 16px
+      line-height: 22px
+      color: $grey
+      transition: all 0.3s ease
+      svg
+        transition: all 0.3s ease
+  &__link-hour
+    font-size: 16px
+    color: $grey
   &__copyright-text
     text-align: center
     padding: 20px 0px

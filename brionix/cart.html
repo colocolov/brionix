@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/jquery.formstyler.css" />
   <link rel="stylesheet" href="css/jquery.formstyler.theme.css" />
   <link rel="stylesheet" href="css/ion.rangeSlider.min.css" />
-  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <!-- подключение favicon -->
   <title>Brionix</title>
 </head>
@@ -21,10 +21,10 @@
     <div class="navbar">
       <nav class="menu">
         <ul class="menu__list">
-          <li class="menu__item"><a class="menu__link" href="#">О нас</a></li>
-          <li class="menu__item"><a class="menu__link" href="catalog.html">Каталог</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Новости</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+          <li class="menu__item"><a href="#">О нас</a></li>
+          <li class="menu__item"><a href="catalog.html">Каталог</a></li>
+          <li class="menu__item"><a href="#">Новости</a></li>
+          <li class="menu__item"><a href="#">Контакты</a></li>
         </ul>
       </nav>
 
@@ -35,10 +35,10 @@
       <div class="navbar__data">
         <ul class="navbar__list">
           <li class="navbar__item navbar__item-lang">
-            <a class="navbar__link navbar__link-active" href="index.html">RU</a>
+            <a class="_active" href="index.html">RU</a>
           </li>
           <li class="navbar__item navbar__item-lang">
-            <a class="navbar__link" href="index-md.html">MD</a>
+            <a href="index-md.html">MD</a>
           </li>
         </ul>
       </div>
@@ -80,53 +80,74 @@
     <div class="container">
       <ul class="category-top__list">
         <li class="category-top__item">
-          <a class="category-top__link" href="#"> <img class="category-top__img" src="images/icons/icons.svg#canister" alt="Иконка масла" />Масла </a>
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#canister"></use>
+            </svg>
+            Масла
+          </a>
         </li>
         <li class="category-top__item">
-          <a class="category-top__link" href="#">
-            <img class="category-top__img" src="images/icons/icons.svg#pads" alt="Иконка колодки" />
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#pads"></use>
+            </svg>
             Колодки
           </a>
         </li>
         <li class="category-top__item">
-          <a class="category-top__link" href="#">
-            <img class="category-top__img" src="images/icons/icons.svg#bulbs" alt="Иконка лампочки" />
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#bulbs"></use>
+            </svg>
             Лампочки
           </a>
         </li>
         <li class="category-top__item">
-          <a class="category-top__link" href="#">
-            <img class="category-top__img" src="images/icons/icons.svg#wipers" alt="Иконка дворника" />
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#wipers"></use>
+            </svg>
             Дворники
           </a>
         </li>
         <li class="category-top__item">
-          <a class="category-top__link" href="#">
-            <img class="category-top__img" src="images/icons/icons.svg#antifreez" alt="Иконка антифриза" />
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#antifreez"></use>
+            </svg>
             Антифриз
           </a>
         </li>
         <li class="category-top__item">
-          <a class="category-top__link" href="#">
-            <img class="category-top__img" src="images/icons/icons.svg#clamp" alt="Иконка хомута" />
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#clamp"></use>
+            </svg>
             Хомуты
           </a>
         </li>
         <li class="category-top__item">
-          <a class="category-top__link" href="#">
-            <img class="category-top__img" src="images/icons/icons.svg#filter" alt="Иконка фильтра" />
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#filter"></use>
+            </svg>
             Фильтра
           </a>
         </li>
         <li class="category-top__item">
-          <a class="category-top__link" href="#">
-            <img class="category-top__img" src="images/icons/icons.svg#himia" alt="Иконка химии" />
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#himia"></use>
+            </svg>
             Химия
           </a>
         </li>
         <li class="category-top__item">
-          <a class="category-top__link" href="#">
-            <img class="category-top__img" src="images/icons/icons.svg#tires" alt="Иконка ската" />
+          <a href="#">
+            <svg class="category-top__img" aria-hidden="true">
+              <use xlink:href="images/icons/icons.svg#tires"></use>
+            </svg>
             Скаты
           </a>
         </li>
@@ -155,7 +176,6 @@
               <table class="table cart__table">
                 <thead>
                   <tr>
-                    <th></thscope=>
                     <th></th>
                     <th>Наименование</th>
                     <th>Цена</th>
@@ -168,8 +188,6 @@
                     <td><img class="cart__icon" src="images/icons/icons.svg#recycle" alt="" /></td>
                     <td>
                       <img src="images/goods/C4064.jpg" alt="" />
-                    </td>
-                    <td>
                       <a href="#">Колодки задн.Iveco Daily 99--/ 2006--</a>
                     </td>
                     <td>350л</td>
@@ -232,6 +250,14 @@
                     </td>
                     <td>350л</td>
                   </tr>
+
+                  <tr>
+                    <td>
+                      <div class="cart__update">
+                        <button class="btn button cart__update-btn">Обновить корзину</button>
+                      </div>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
               <!-- table -->
@@ -270,10 +296,10 @@
           </a>
           <ul class="footer__social">
             <li class="footer__social-item">
-              <a class="footer__social-link footer__social-link--facebook" href="#"></a>
+              <a class="footer__social-link footer__social-link--facebook" href="#" target="_blank"></a>
             </li>
             <li class="footer__social-item">
-              <a class="footer__social-link footer__social-link--instagram" href="#"></a>
+              <a class="footer__social-link footer__social-link--instagram" href="#" target="_blank"></a>
             </li>
             <li class="footer__social-item">
               <a class="footer__social-link footer__social-link--viber" href="#"></a>
@@ -283,46 +309,53 @@
         <div class="footer__item">
           <h4 class="heading footer__heading">Компания</h4>
           <ul class="footer__list">
-            <li class="footer__list-item"><a class="footer__link" href="#">О нас</a></li>
-            <li class="footer__list-item"><a class="footer__link" href="#">Новости</a></li>
-            <li class="footer__list-item"><a class="footer__link" href="#">Оплата и доставка</a></li>
-            <li class="footer__list-item"><a class="footer__link" href="#">Контакты</a></li>
+            <li class="footer__list-item"><a href="#">О нас</a></li>
+            <li class="footer__list-item"><a href="#">Новости</a></li>
+            <li class="footer__list-item"><a href="#">Оплата и доставка</a></li>
+            <li class="footer__list-item"><a href="#">Контакты</a></li>
           </ul>
         </div>
         <div class="footer__item">
           <h4 class="heading footer__heading">Навигация сайта</h4>
           <ul class="footer__list">
-            <li class="footer__list-item"><a class="footer__link" href="#">Автомасла</a></li>
-            <li class="footer__list-item"><a class="footer__link" href="#">Тормозные колодки и диски</a></li>
-            <li class="footer__list-item"><a class="footer__link" href="#">Автолампы</a></li>
-            <li class="footer__list-item"><a class="footer__link" href="#">Стеклоочистители</a></li>
-            <li class="footer__list-item"><a class="footer__link" href="#">Антифриз</a></li>
-            <li class="footer__list-item"><a class="footer__link" href="#">Хомуты</a></li>
+            <li class="footer__list-item"><a href="#">Автомасла</a></li>
+            <li class="footer__list-item"><a href="#">Тормозные колодки и диски</a></li>
+            <li class="footer__list-item"><a href="#">Автолампы</a></li>
+            <li class="footer__list-item"><a href="#">Стеклоочистители</a></li>
+            <li class="footer__list-item"><a href="#">Антифриз</a></li>
+            <li class="footer__list-item"><a href="#">Хомуты</a></li>
           </ul>
         </div>
         <div class="footer__item">
           <h4 class="heading footer__heading">Контакты</h4>
           <ul class="footer__list">
             <li class="footer__list-item">
-              <img class="footer__list-icon" src="images/icons/icons.svg#phone-white" alt="icon: телефон" />
-              <a class="footer__link footer__link-phone" href="tel:+37379223333">+373 22 333 333</a>
+              <a class="footer__link footer__link-phone" href="tel:+37379223333">
+                <svg class="footer__list-icon" aria-hidden="true">
+                  <use xlink:href="images/icons/icons.svg#phone-white"></use>
+                </svg>+373 22 333 333
+              </a>
             </li>
             <li class="footer__list-item">
-              <img class="footer__list-icon" src="images/icons/icons.svg#email-white" alt="icon: email" /><a
-                class="footer__link"
-                href="mailto:info@brionix.md"
-                >info@brionix.md</a
-              >
+              <a class="footer__link" href="mailto:info@brionix.md">
+                <svg class="footer__list-icon" aria-hidden="true">
+                  <use xlink:href="images/icons/icons.svg#email-white"></use>
+                </svg>info@brionix.md
+              </a>
+            </li>
+            <li class="footer__list-item" target="_blank">
+              <a class="footer__link" href="#">
+                <svg class="footer__list-icon" aria-hidden="true">
+                  <use xlink:href="images/icons/icons.svg#geo-white"></use>
+                </svg>Chisinau, Uzinelor, 64
+              </a>
             </li>
             <li class="footer__list-item">
-              <img class="footer__list-icon" src="images/icons/icons.svg#geo-white" alt="icon: гео-точка" /><a
-                class="footer__link"
-                href="#"
-                >Chisinau, Uzinelor, 64</a
-              >
-            </li>
-            <li class="footer__list-item">
-              <a class="footer__link footer__link-hour" href="#">Режим работы: 9:00 - 17:00</a>
+              <div class="footer__link footer__link-hour">
+                <svg class="footer__list-icon" aria-hidden="true">
+                  <use xlink:href="images/icons/icons.svg#time"></use>
+                </svg>Режим работы: 9:00 - 17:00
+              </div>
             </li>
           </ul>
         </div>

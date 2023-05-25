@@ -1,8 +1,27 @@
 .tophead
   margin-bottom: 70px
-  &-slider__item
+  &-slider
+    height: 275px
     border-radius: 0 0 10px 10px
     overflow: hidden
+  &-slider__item
+    height: 275px
+    position: relative
+    overflow: hidden
+    img
+      object-fit: cover
+      width: 100%
+  &__btn
+    position: absolute
+    left: 15%
+    bottom: 15%
+    // transform: translateY(-50%)
+    display: flex
+    align-items: flex-start
+    // border-radius: 0 0 10px 10px
+    background: $red
+    color: $bgc
+    padding: 0.8rem 3.5rem
 
 .swiper-pagination-bullet
   width: 10px
