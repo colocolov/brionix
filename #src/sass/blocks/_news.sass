@@ -13,15 +13,23 @@
     align-items: flex-start
     // height: 422px
   &__heading
+
   &__button
-    padding: 16px 50px 16px 32px
-    &::before
-      top: 23px
-      right: 25px
+    // padding: 16px 50px 16px 32px
+    // &::before
+    //   top: 23px
+    //   right: 25px
+    // &:hover::before
+    //   right: 18px
+
   &__item
     flex: 0 1 270px
     // width: 271px
     margin-left: 20px
+    & .news__img
+      transition: transform 2s ease-in
+    &:hover .news__img
+      transform: scale(1.15)
   &__image
     width: 270px
     height: 321px
@@ -35,7 +43,11 @@
     object-fit: cover
   &__title
     @extend %text-title
-    margin-bottom: 7px
+    // margin-bottom: 7px
+    transition: color 0.3s ease-in
+    @media (any-hover: hover)
+      &:hover
+        color: $red
   &__link
     @extend %label
     font-size: 12px
@@ -51,3 +63,8 @@
       height: 12px
       background: url(../images/icons/icons.svg#arrow-left-link) no-repeat 0 0
       transition: all 0.3s
+    &:hover
+      color: $red
+      &::before
+        transition: all 0.3s
+        right: -20px

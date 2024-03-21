@@ -1,0 +1,32 @@
+.menu
+  &__list
+    font-family: 'Raleway', sans-serif
+    font-weight: 400
+    font-size: 16px
+    line-height: 20px
+    display: flex
+    li
+      margin-right: 38px
+      position: relative
+      cursor: pointer
+      &::before
+        content: ''
+        position: absolute
+        width: 0%
+          // left: auto
+          // right: 0
+        height: 2px
+        bottom: -10px
+        background-color: $red
+        transition: all .3s ease-in
+        // right: 0
+      @media (any-hover: hover)
+        &:hover
+          color: $bl
+          &::before
+            width: 100%
+            right: auto
+            left: 0
+      a
+        color: $black
+        // transition: all .5s ease-in  

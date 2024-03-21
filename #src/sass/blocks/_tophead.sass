@@ -1,28 +1,59 @@
 .tophead
-  margin-bottom: 70px
+  // margin-bottom: 70px
   &-slider
-    height: 275px
-    border-radius: 0 0 10px 10px
-    overflow: hidden
+    height: 350px
+    // border-radius: 0 0 10px 10px
+    // overflow: hidden
   &-slider__item
-    height: 275px
-    position: relative
-    overflow: hidden
+    display: flex
+    height: 350px
+    justify-content: space-between
+    // position: relative
+    // overflow: hidden
+  &-slider__info
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    max-width: 470px
+    padding: 50px 0
+    color: $bgc
+    &--dark
+      color: $bl
+  &-slider__head
+    color: inherit
+    margin-bottom: 20px
+    &::before
+      content: none
+  &-slider__text
+    color: inherit
+    font-size: 16px
+    // line-height: 1.5
+  &-slider__
+
+  &-slider__img
+    height: 100%
+    display: flex
+    align-items: center
     img
       object-fit: cover
       width: 100%
+      height: 100%
   &__btn
-    position: absolute
-    left: 15%
-    bottom: 15%
+    // position: absolute
+    // left: 15%
+    // bottom: 15%
     // transform: translateY(-50%)
-    display: flex
-    align-items: flex-start
+    // display: flex
+    // align-items: flex-start
     // border-radius: 0 0 10px 10px
+    margin-right: auto
     background: $red
     color: $bgc
     padding: 0.8rem 3.5rem
 
+
+.swiper-slide
+  box-sizing: border-box
 .swiper-pagination-bullet
   width: 10px
   height: 10px

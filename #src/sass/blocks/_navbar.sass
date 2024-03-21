@@ -14,7 +14,7 @@
     &::after
       content: ''
       position: absolute
-      top: 5px
+      top: 2px
       left: 0
       background: url(../images/icons/icons.svg#phone-border) no-repeat 0 0
       width: 25px
@@ -22,160 +22,38 @@
   &__list
     display: flex
     align-items: center
+    gap: 8px
+    li
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        width: 0%
+        height: 2px
+        bottom: -7px
+        background-color: $red
+        transition: all .3s ease-in
+      @media (any-hover: hover)
+        &:hover::before
+          width: 100%
+          right: auto
+          left: 0
+      &:first-child
+        &::after
+          position: absolute
+          content: '|'
+          padding-left: 2px
+          color: $black
+
   &__item
-    font-family: 'Raleway-Regular', sans-serif
+    font-family: 'Raleway'
     font-weight: 400
     font-size: 13px
     line-height: 26px
     color: $black
-    &-lang
-      margin-right: 5px
-      &:first-child
-        &::after
-          content: '|'
-          padding-left: 2px
-          color: $black
     a
       color: $black
       cursor: pointer
       transition: all 0.3s ease
       &._active
         font-weight: 700
-.menu
-  &__list
-    font-family: 'Raleway-Regular', sans-serif
-    font-weight: 400
-    font-size: 16px
-    line-height: 20px
-    display: flex
-  &__item
-    // position: relative
-    a
-      position: relative
-      color: $black
-      cursor: pointer
-      transition: all .3s
-      &::before
-        content: ''
-        position: absolute
-        width: 0
-        // left: auto
-        background-color: $bl
-        height: 2px
-        bottom: -11px
-        // right: 0
-  &__item:not(:last-child)
-    margin-right: 38px
-
-.button
-  padding: 10px 15px
-  &--entry
-    transition: all 0.3s
-  &--registration
-    font-family: 'Raleway-Medium', sans-serif
-    font-weight: 400
-    background-color: $red
-    color: $bgc
-
-.top
-  padding: 18px 0
-  background-color: $grey
-  border-top: 1px solid $bll
-  border-bottom: 1px solid $bll
-  &__inner
-    display: flex
-    justify-content: space-between
-    align-items: center
-  &__logo-img
-    width: 200px
-  &__search
-    &-form
-      height: 40px
-      width: 464px
-      position: relative
-    &-input
-      background-color: $bgc
-      border: 1px solid transparent
-      padding: 12px 105px 12px 25px
-      border-radius: 5px
-      width: 100%
-      height: 100%
-      &::placeholder
-        color: $bll
-        @extend %podpisi
-      &:focus
-        border: 1px solid $red
-    &-button
-      position: absolute
-      background-color: $red
-      color: $bgc
-      border-radius: 0 5px 5px 0
-      top: 0
-      right: 0
-      height: 100%
-      width: 75px
-      border: none
-      outline: none
-      font-size: 12px
-      cursor: pointer
-  &__basket
-    &-info
-      position: relative
-      display: flex
-      flex-direction: column
-      padding-left: 30px
-      &::after
-        content: ''
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
-        left: 0
-        background: url(../images/icons/icons.svg#cart-top) no-repeat -2px 4px
-        width: 25px
-        height: 25px
-      &:hover
-        color: $red
-        transition: all 0.5s
-    &-title
-      @extend %text-title
-      line-height: 18px
-      color: inherit
-    &-total
-      font-family: 'Raleway-Medium', sans-serif
-      font-weight: 400
-      font-size: 12px
-      line-height: 14px
-
-.category-top
-  border-bottom: 1px solid $bll
-  &__list
-    display: flex
-    // justify-content: space-between
-    align-items: center
-  &__item
-    flex-grow: 1
-    cursor: pointer
-    border-left: 1px solid $bll
-    transition: all .3s
-    &:last-child
-      border-right: 1px solid $bll
-    a
-      display: flex
-      align-items: center
-      justify-content: center
-      padding: 14px 16px
-      font-family: 'Raleway-Regular'
-      font-weight: 400
-      font-size: 18px
-      line-height: 20px
-      color: $black
-    // text-transform: uppercase
-  &__link picture
-    height: 15px
-  &__img
-    height: 19px
-    width: 25px
-    display: inline-block
-    margin-right: 3px
-    fill: $bl
-

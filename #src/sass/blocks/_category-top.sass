@@ -1,0 +1,44 @@
+.category-top
+  // border-bottom: 1px solid $bll
+  &__list
+    display: flex
+    // justify-content: space-between
+    align-items: center
+  &__item
+    position: relative
+    flex-grow: 1
+    cursor: pointer
+    // border-left: 1px solid $bll
+    transition: all .3s ease-in
+    // &:last-child
+      // border-right: 1px solid $bll
+    &:not(:last-child)
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        right: -1px
+        width: 3px
+        height: 47px
+        transform: translateY(-50%)
+        background: url("../images/icons/divider.png") no-repeat
+        background-size: contain
+    a
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 14px 16px
+      font-family: 'Raleway'
+      font-weight: 400
+      font-size: 18px
+      line-height: 20px
+      color: $black
+    // text-transform: uppercase
+  &__link picture
+    height: 15px
+  &__img
+    height: 19px
+    width: 25px
+    display: inline-block
+    margin-right: 3px
+    fill: $bl

@@ -1,9 +1,9 @@
 .characteristics
-  margin-bottom: 100px
+  // margin-bottom: 100px
   &__wrapper
     background-color: $grey
     padding-top: 70px
-    padding-bottom: 100px
+    padding-bottom: 70px
   &__tabs
     display: flex
     align-items: center
@@ -13,28 +13,47 @@
     @extend %text
     cursor: pointer
     &_active
-      font-family: "MuseoSansCyrl-500"
+      // font-family: "Montserrat"
       font-weight: 500
       color: $bl
       background-color: $grey
       border-radius: 5px 5px 0 0
   &__info
     display: none
+    & > h2
+      display: none
+    & p:not(:last-child)
+      margin-bottom: 20px
     &_active
       display: block
   &__text
     @extend %body
     &:not(:last-child)
       margin-bottom: 30px
+
+  &__chars
+    display: flex
+    flex-direction: column
+    max-width: 500px
+    gap: 20px
   &__element
     display: flex
     justify-content: space-between
-    margin-bottom: 20px
-    @extend %body
-    border-bottom: 1px solid rgba(46, 46, 46, 0.1)
+    font-size: 16px
+    // margin-bottom: 20px
+    // @extend %body
+    // border-bottom: 1px solid rgba(46, 46, 46, 0.1)
     &-right
-      font-family: "MuseoSansCyrl-500"
+      font-family: "Montserrat"
       font-weight: 500
       color: $black
     &-left
-      @extend %text
+      font-family: "Raleway"
+      font-weight: 400
+      overflow: hidden
+      flex-grow: 1
+      position: relative
+      margin-right: 5px
+      &::after
+        content: ' ................................................................................................................................................'
+        position: absolute

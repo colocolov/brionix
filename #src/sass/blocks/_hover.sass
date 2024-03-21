@@ -1,11 +1,12 @@
 @media ( min-width: 992px )
-  .menu__item a
+  .menu__list li a
     &:hover
       color: $bl
       &::before
         width: 100%
         right: auto
         left: 0
+
 
   .navbar
     &__phone:hover
@@ -17,10 +18,6 @@
     &:hover
       color: $red
 
-  .breadcrumbs__list
-    a:hover
-      color: $bl
-
   .category-top
     &__item
       &:hover
@@ -29,17 +26,6 @@
           fill: #fff
       a:hover
         color: $bgc
-
-  .category
-    &__item
-      &:hover
-        transition: all 0.5s
-        transform: scale(1.02)
-        filter: drop-shadow(3px 3px 10px rgba(50, 50, 50, 0.15))
-        background-color: $red
-        color: $bgc
-        & .category__name
-          color: $bgc
 
   .category__card:hover
     transition: all 0.5s
@@ -50,108 +36,53 @@
     & .category__head
       color: $red
 
-  .link__button
-    &:hover
-      color: $bgc
-      //filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15))
-      &::before
-        transition: all 0.3s
-        right: 22px
-
   .product
-    &__item
-      &:hover
-        transition: all 0.5s
-        filter: drop-shadow(3px 3px 10px rgba(50, 50, 50, 0.15))
-        color: $red
     &-goods__item
       &:hover
         transition: all 0.3s
         filter: drop-shadow(3px 3px 10px rgba(50, 50, 50, 0.15))
         color: $red
-    &__image
-      &:hover
-        // transition: all 1s
-        // transform: scale(1.1)
     &__button
       &:hover
         transition: all 0.3s
         background: $red url('../images/icons/icons.svg#cart-white') no-repeat center center
         width: 36px
         height: 36px
-  .product__item:hover .product__title, .product__item:hover .product__price, .product-goods__item:hover .product__title
+
+  .product__item:hover .product__title,
+  .product__item:hover .product__price,
+  .product-goods__item:hover .product__title
     transition: all 0.3s
     color: $red
-  .favorites__nav--left.swiper-button-prev:hover
-    transition: background-color 1s ease-out
-    background-color: $red
-    border-radius: 50%
   .favorites__nav--left.swiper-button-prev:hover::after
     color: $bgc
-  .favorites__nav--right.swiper-button-next:hover
-    transition: background-color 1s ease-out
-    background-color: $red
-    border-radius: 50%
   .favorites__nav--right.swiper-button-next:hover::after
     color: $bgc
 
-  .news
-    &__item:hover .news__img
-      transition: all 1.5s
-      transform: scale(1.2)
-      // color: $red
-    &__link
-      &:hover
-        color: $red
-        &::before
-          transition: all 0.3s
-          right: -20px
-    &__button
-      &:hover
-        &::before
-          right: 18px
-
   .good
-    &-photos__big
-      &:hover
-        border: 2px solid rgba(237, 34, 40, 1)
-    &-photos__small
-      &:hover
-        border: 2px solid rgba(237, 34, 40, 1)
-    &-photos__img
-      &:hover
-        transform: scale(1.02)
-    &-info__about a
-      &::before
-        content: ''
-        position: absolute
-        width: 0
-        left: auto
-        background-color: $red
-        height: 2px
-        bottom: -3px
-        right: 0
-        transition: all .3s
-      &:hover
-        color: $red
-        &::before
-          width: 100%
-          right: auto
-          left: 0
+    // &-info__about a
+    //   &::before
+    //     content: ''
+    //     position: absolute
+    //     width: 0
+    //     left: auto
+    //     background-color: $red
+    //     height: 2px
+    //     bottom: -3px
+    //     right: 0
+    //     transition: all .3s
+    //   &:hover
+    //     color: $red
+    //     &::before
+    //       width: 100%
+    //       right: auto
+    //       left: 0
     &-info__btn-cart
       &:hover
         background-color: darken($red,10%)
         &::before
           transition: all 1s
           transform: scale(1.10)
-
-  .catalog
-    &__filter-item button
-      &:hover
-        background: $grey
-  .pagination-list__item a
-    &:hover
-      color: $red
 
   .cart__total-btn
     &:hover
@@ -162,24 +93,3 @@
   .cart__table-footer a
     &:hover
       color: $red
-
-  .footer
-    &__list-item a:hover,
-      color: $red
-      svg
-        fill: $red
-    &__social-link
-      &:hover
-        background-color: $red
-      &--facebook
-        &:hover
-          &::after
-            background: url(../images/icons/icons.svg#facebook-light) no-repeat 0 0
-      &--instagram
-        &:hover
-          &::after
-            background: url(../images/icons/icons.svg#instagram-light) no-repeat 0 0
-      &--viber
-        &:hover
-          &::after
-            background: url(../images/icons/icons.svg#viber-light) no-repeat 0 0

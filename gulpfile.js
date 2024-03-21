@@ -33,7 +33,7 @@ let { src, dest, task } = require("gulp"),
   gulp = require("gulp"),
   browsersync = require("browser-sync").create(),
   fileinclude = require("gulp-file-include"),
-  scss = require("gulp-sass"),
+  scss = require('gulp-sass')(require('sass')),
   autoprefixer = require("gulp-autoprefixer"),
   mediagroup = require("gulp-group-css-media-queries"),
   cleancss = require("gulp-clean-css"),
@@ -57,7 +57,10 @@ function browserSync(params) {
 }
 
 function html() {
-  return src(path.src.html).pipe(fileinclude()).pipe(dest(path.build.html)).pipe(browsersync.stream());
+  return src(path.src.html)
+    .pipe(fileinclude())
+    .pipe(dest(path.build.html))
+    .pipe(browsersync.stream());
 }
 
 function css() {

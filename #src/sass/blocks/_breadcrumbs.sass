@@ -6,18 +6,21 @@
   &__list
     display: flex
     align-items: center
-    font-family: "Raleway-Regular"
+    font-family: 'Raleway'
     font-weight: 400
     font-size: 14px
     line-height: 16px
     a
       color: $bll
       transition: color 0.3s ease
+      @media (any-hover: hover)
+        &:hover
+          color: $bl
+    // &::after
+    //   content: ' /'
+    //   margin-right: 4px
     &:last-child
       color: $black
-      // &:not(:last-child)
-      //   &::after
-      //     content: ' /'
-      //     margin-right: 4px
-      // a
-      //   color: inherit
+    &-item:not(:last-child)::after
+      content: ' /'
+      margin-right: 4px

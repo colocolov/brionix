@@ -8,7 +8,7 @@
     display: flex
     justify-content: space-between
     align-items: center
-    margin-bottom: 25px
+    margin-bottom: 40px
   &__title
     position: relative
   &__button
@@ -16,38 +16,75 @@
     // height: 56px
     &::before
       top: 23px
+
+  // карточки
   &__list
-    display: flex
+    display: grid
+    grid-template-rows: repeat(2, 290px)
+    grid-template-columns: repeat(4, 262px)
+    gap: 30px
     // justify-content: space-between
-    align-items: center
-    flex-wrap: wrap
+    // align-items: center
+    // flex-wrap: wrap
   &__item
-    width: 366px
-    height: 107px
-    background: $bgc
-    color: $bl
-    border-radius: 3px
-    padding-left: 25px
-    padding-right: 23px
-    margin-bottom: 20px
-    transition: all 0.3s
-    &:not(:nth-child(3n+3))
-      margin-right: 20px
+    position: relative
+    // width: 264px
+    // height: 310px
+    background: $bl
+    color: $bgc
+    border-radius: 10px
+    transition: all 0.3s ease-in
+    overflow: hidden
+    &:first-child
+      grid-row: 2 span
+      grid-column: 1 / 2
+      & .category__img
+        padding-bottom: 610px
+    &:last-child
+      grid-row: 2 / 3
+      grid-column: 3 / 5
+    // &:not(:nth-child(3n+3))
+    //   margin-right: 20px
+    &:hover
+      & .category__img
+        transform: scale(1.15)
+        // filter: drop-shadow(3px 3px 10px rgba(50, 50, 50, 0.15))
+      & .category__name:before
+        width: 0
+        right: 0
+    & .category__img
+      transition: transform 2s ease-in
+
   &__link
-    display: flex
-    align-items: center
-    height: 100%
+    // display: flex
+    // align-items: center
+    // height: 100%
+    // display: block
+
   &__img
-    height: 85px
-    width: 97px
-  &__image
-    height: 100%
-    width: 100%
-    object-fit: cover
+    padding-bottom: 290px
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.35) 54%, rgba(0, 0, 0, 0.50) 100%)
+    img
+      transition: all 0.3s ease-in
   &__name
-    margin-left: 55px
-    @extend %text-title
-    font-weight: 700
+    position: absolute
+    bottom: 30px
+    left: 30px
+    color: $bgc
+    transition: all 0.3s ease-in
+    &::before
+      transition: all 0.3s ease-in
+
+    // margin-left: 55px
+    // @extend %text-title
+    // font-weight: 700
     // color: inherit
 
   &__wrapper
@@ -85,7 +122,7 @@
     align-items: flex-end
     margin-bottom: 20px
   &__head
-    font-family: 'Raleway-Bold'
+    font-family: 'Raleway'
     font-weight: 700
     font-size: 18px
     line-height: 1.3

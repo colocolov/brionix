@@ -1,172 +1,218 @@
-// слайдер на главной
-const headerSlider = new Swiper(".tophead-slider", {
-  autoplay: {
-    delay: 3000,
-  },
-  on: {
-    init() {
-      this.el.addEventListener("mouseenter", () => {
-        this.autoplay.stop();
-      });
-      this.el.addEventListener("mouseleave", () => {
-        this.autoplay.start();
-      });
+// СЛАЙДЕР НА ГЛАВНОЙ
+const topheadSlider = document.querySelector('.tophead-slider');
+if (topheadSlider) {
+  const headerSlider = new Swiper(".tophead-slider", {
+    autoplay: {
+      delay: 3000,
     },
-  },
-  //скорость переключения слайдов
-  speed: 800,
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    type: "bullets",
-    clickable: true,
-    dynamicBullets: true,
-  },
-  //эффект перехода слайда
-  effect: "fade",
-  fadeEffect: {
-    crossFade: true,
-  },
-  //отложенная загрузка:
-  //отключаем презагрузку картинок
-  preloadImages: false,
-  lazy: {
-    loadOnTransitionStart: false,
-    loadPrevNext: false,
-  },
-});
+    on: {
+      init() {
+        this.el.addEventListener("mouseenter", () => {
+          this.autoplay.stop();
+        });
+        this.el.addEventListener("mouseleave", () => {
+          this.autoplay.start();
+        });
+      },
+    },
+    //скорость переключения слайдов
+    speed: 800,
+    // If we need pagination
+    pagination: {
+      el: ".tophead-pagin",
+      type: "bullets",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    //эффект перехода слайда
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    //отложенная загрузка:
+    //отключаем презагрузку картинок
+    preloadImages: false,
+    lazy: {
+      loadOnTransitionStart: false,
+      loadPrevNext: false,
+    },
+  });
+}
+//----- end tophead Slider
+
+// СЛАЙДЕР ПОПУЛЯРНЫХ ТОВАРОВ
+const favorSlider = document.querySelector('.favorites__content');
+if (favorSlider) {
+  const favoritesSlider = new Swiper(".favorites__content", {
+    // loop: true,
+    // autoplay: {
+    //   delay: 5000,
+    // },
+    speed: 800,
+    navigation: {
+      nextEl: ".favorites__nav--right",
+      prevEl: ".favorites__nav--left",
+      clickable: true,
+    },
+    spaceBetween: 20,
+    // autoHeight: true,
+    slidesPerView: 4.5,
+    // preloadImages: false,
+    // lazy: {
+    //   loadOnTransitionStart: false,
+    //   loadPrevNext: false,
+    // },
+  });
+}
+//----- end favorites Slider
+
+// СЛАЙДЕР КАРТОЧКИ
+const gallerySlider = document.querySelector(".good-photos__gallery");
+if (gallerySlider) {
+  // subslider
+  let imagesSubSlider = new Swiper(".good-photos__subslider", {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 3,
+    spaceBetween: 12,
+    speed: 800,
+    // freeMode: true,
+    // watchSlidesProgress: true,
+    // direction: "vertical",
+    // loop: true,
+  }); 
+
+  // main slider
+  let imagesProductSlider = new Swiper(".good-photos__mainslider", {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    // autoplay: {
+      //   delay: 5000,
+      // },
+      // loop: true,
+    thumbs: {
+      swiper: imagesSubSlider,
+    },
+    speed: 800,
+    loop: true,
+  }); 
+}
+
+// СЛАЙДЕР БРЕНДОВ
+// const brendSlider = new Swiper(".brends__slider", {
+//   loop: true,
+//   autoplay: {
+//     delay: 3000,
+//   },
+//   pauseOnMouseEnter: true,
+//   speed: 800,
+//   slidesPerView: 5,
+//   spaceBetween: 20,
+// });
 //-----
 
-// слайдер популярных товаров
-const favoritesSlider = new Swiper(".favorites__content", {
-  speed: 800,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-    clickable: true,
-  },
-  autoHeight: true,
-  slidesPerView: 4.2,
-});
-//-----
+// ПЕРЕКЛЮЧАТЕЛЬ ВИДОВ КАРТОЧКИ ТОВАРА
+const catalogView = document.querySelector('.catalog__inner');
+if (catalogView) {
 
-// слайдер брендов
-const brendSlider = new Swiper(".brends__slider", {
-  loop: true,
-  autoplay: {
-    delay: 3000,
-  },
-  pauseOnMouseEnter: true,
-  speed: 800,
-  slidesPerView: 5,
-  spaceBetween: 20,
-});
-//-----
+  const styleView = localStorage.getItem('view-style');
+  viewCatalogItem(styleView);
 
-// скрытие кнопки добавить в корзину
-const btnAddCart = document.querySelector('.product__cart a');
-if (btnAddCart) {
+  document.querySelectorAll('button[data-view]').forEach(item => {
+    item.addEventListener('click', () => {
+      const view = item.dataset.view;
+      // console.log(view);
+      viewCatalogItem(view);
+    });
+  });
 
-  btnAddCart.onclick = function (){
-    setTimeout(function() {
-      btnAddCart.style.display = "none";
-      const isAdd = document.querySelector('.added_to_cart');
-    }, 1000);
-  };
-  
-};
-
-(function ($) {
-  "use strict";
-
-// полсчет кол-ва товара для корзины
-  $('.good-info__quantity .good-info__quantity-minus, .good-info__quantity .good-info__quantity-plus').on('click', function (e) {
-    e.preventDefault();
-    var button = $(this);
-    // console.log(button);
-    // console.log(button.parent().parent());
-    var oldValue = button.parent().parent().find('input').val();
-    if (button.hasClass('good-info__quantity-plus')) {
-      var newVal = parseFloat(oldValue) + 1;
-    } else {
-      if (oldValue > 1) {
-        var newVal = parseFloat(oldValue) - 1;
+  function viewCatalogItem(view) {
+    if (view == 'list') {
+        catalogView.classList.add('_active');
+        localStorage.setItem('view-style', 'list');
+        document.querySelector('button[data-view=list]').style.opacity = 1;
+        document.querySelector('button[data-view=grid]').style.opacity = 0.3;
       } else {
-        newVal = 1;
+        catalogView.classList.remove('_active');
+        localStorage.setItem('view-style', 'grid');
+        document.querySelector('button[data-view=grid]').style.opacity = 1;
+        document.querySelector('button[data-view=list]').style.opacity = 0.3;
       }
-    }
-    button.parent().parent().find('input').val(newVal);
+  }
+}  
+
+
+
+
+const quantityBlock = document.querySelector('.good-info__quantity');
+if (quantityBlock) {
+
+  (function ($) {
+    "use strict";
+
+  // полсчет кол-ва товара для корзины
+    // $('.good-info__quantity .good-info__quantity-minus, .good-info__quantity .good-info__quantity-plus').on('click', function (e) {
+    //   e.preventDefault();
+    //   var button = $(this);
+    //   var oldValue = button.parent().parent().find('input').val();
+    //   if (button.hasClass('good-info__quantity-plus')) {
+    //     var newVal = parseFloat(oldValue) + 1;
+    //   } else {
+    //     if (oldValue > 1) {
+    //       var newVal = parseFloat(oldValue) - 1;
+    //     } else {
+    //       newVal = 1;
+    //     }
+    //   }
+    //   button.parent().parent().find('input').val(newVal);
+    // });
+    $('.good-info__quantity button').on('click', function () {
+      let btn = $(this);
+      let inputQut = btn.parent().find('.good-info__input');
+      let prevValue = +(inputQut.val());
+      let newValue = 1;
+
+      if (btn.hasClass('good-info__quantity-plus')) {
+        newValue = prevValue + 1;
+      } else {
+        if (prevValue > 1) {
+          newValue = prevValue - 1;
+        }
+      }
+      inputQut.val(newValue);
+    });
+
+
+
+  $(document).ready(function () {
+    // табы для товара
+    $("ul.characteristics__tabs").on("click", "li:not(.characteristics__tab_active)", function () {
+      $(this)
+        .addClass("characteristics__tab_active")
+        .siblings()
+        .removeClass("characteristics__tab_active")
+        .closest("section.characteristics")
+        .find("div.characteristics__info")
+        .removeClass("characteristics__info_active")
+        .eq($(this).index())
+        .addClass("characteristics__info_active");
+    });
+    // -----
+
+
+
+    // скрытие/показ разделов в фильтре
+    $(".filter__item-drop").on("click", function () {
+      $(this).toggleClass("filter__item-drop--active");
+      $(this).next().slideToggle("200");
+    });
+    // ------
+
   });
 
-$(document).ready(function () {
-  // табы для товара
-  $("ul.characteristics__tabs").on("click", "li:not(.characteristics__tab_active)", function () {
-    $(this)
-      .addClass("characteristics__tab_active")
-      .siblings()
-      .removeClass("characteristics__tab_active")
-      .closest("section.characteristics")
-      .find("div.characteristics__info")
-      .removeClass("characteristics__info_active")
-      .eq($(this).index())
-      .addClass("characteristics__info_active");
-  });
-  // -----
-
-  // смена отображения товаров в каталоге
-  $(".catalog__filter-btngrid").on("click", function () {
-    $(this).addClass("catalog__filter-btn--active");
-    $(".catalog__filter-btnline").removeClass("catalog__filter-btn--active");
-    // товар в сетку
-    $(".catalog__item").removeClass("catalog__item--line");
-    $(".catalog__item-left").removeClass("catalog__item-left--line");
-    $(".catalog__item-right").removeClass("catalog__item-right--line");
-    $(".favorites__labels").removeClass("catalog__item--line-remove");
-    $(".favorites__image").removeClass("catalog__item--line-remove");
-    $(".favorites__title").removeClass("catalog__item--line-title");
-    $(".catalog__item--line-code").removeClass("show");
-    $(".catalog__item--line-brend").removeClass("show");
-    $(".favorites__cart").removeClass("catalog__item--line-cart");
-    $(".favorites__button").removeClass("catalog__item--line-button");
-  });
-
-  $(".catalog__filter-btnline").on("click", function () {
-    $(this).addClass("catalog__filter-btn--active");
-    $(".catalog__filter-btngrid").removeClass("catalog__filter-btn--active");
-    // товар в строку
-    $(".catalog__item").addClass("catalog__item--line");
-    $(".catalog__item-left").addClass("catalog__item-left--line");
-    $(".catalog__item-right").addClass("catalog__item-right--line");
-    $(".favorites__labels").addClass("catalog__item--line-remove");
-    $(".favorites__image").addClass("catalog__item--line-remove");
-    $(".favorites__title").addClass("catalog__item--line-title");
-    $(".catalog__item--line-code").addClass("show");
-    $(".catalog__item--line-brend").addClass("show");
-    $(".favorites__cart").addClass("catalog__item--line-cart");
-    $(".favorites__button").addClass("catalog__item--line-button");
-  });
-  // ------
-
-  // скрытие/показ разделов в фильтре
-  $(".filter__item-drop").on("click", function () {
-    $(this).toggleClass("filter__item-drop--active");
-    $(this).next().slideToggle("200");
-  });
-  // ------
-
-  // стилизация чекбоксов и радио кнопки
-  $(".filter-style").styler();
-  // ------
-
-  // стилизация фильтра цены
-  $(".js-range-slider").ionRangeSlider({
-    type: "double",
-    step: 50,
-    grid: false,
-  });
-  // -----
-
-});
-
-// end JQ
-})(jQuery);
+  // end JQ
+  })(jQuery);
+}
+//----  end quantity

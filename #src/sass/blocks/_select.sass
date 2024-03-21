@@ -1,0 +1,54 @@
+.select
+  // растяшиваем блок на всю ширину родителя
+  width: 100%
+
+  // убираем браузерную стрелку
+  -moz-appearance: none
+  -webkit-appearance: none
+  appearance: none
+
+  border: 1px solid $bgc
+  border-radius: 0px
+  background-color: $bgc
+
+  padding: 10px 35px 10px 15px
+
+  font-size: 15px
+  color: $black
+
+  outline: none
+  cursor: pointer
+
+  // убираем стрелочку в IE 10/11
+  &::-ms-expand
+    display: none
+
+  &:focus
+    outline: none
+
+
+  &__wrapper
+    position: relative
+    margin-left: auto
+    border-radius: 5px
+    overflow: hidden
+    margin-right: 35px
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      right: 15px
+      transform: translateY(-50%)
+
+      display: block
+
+      // рисуем стрелку
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 8px 6px 0 6px
+      border-color: $bl transparent transparent transparent
+
+      // снимаем клик со стрелки
+      pointer-events: none
+

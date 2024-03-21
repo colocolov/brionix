@@ -8,28 +8,39 @@
     display: flex
     justify-content: space-between
     margin-bottom: 45px
-    &-item button
-      position: relative
-      @extend %podpisi
-      font-size: 14px
-      color: $text
-      padding: 5px 33px 5px 17px
-      background: $bgc
-      border: 1px solid rgba(46, 46, 46, 0.25)
-      border-radius: 15px
-      cursor: pointer
-      transition: all 0.5s
-      &::before
-        position: absolute
-        content: ''
-        top: 1px
-        // bottom: 2px
-        right: 5px
-        width: 24px
-        height: 24px
-        background: url(../images/iconsprite/circle-x.svg) no-repeat 0 0
-      & + button
-        margin-left: 10px
+    background-color: $grey
+    padding: 20px
+    border-radius: 7px
+    &-item
+      display: flex
+      align-items: center
+      & button
+        position: relative
+        @extend %podpisi
+        font-size: 14px
+        color: $text
+        padding: 5px 33px 5px 17px
+        background: $bgc
+        border: 1px solid rgba(46, 46, 46, 0.25)
+        border-radius: 15px
+        cursor: pointer
+        transition: all 0.3s ease-in
+        &::before
+          position: absolute
+          content: ''
+          top: 1px
+          // bottom: 2px
+          right: 5px
+          width: 24px
+          height: 24px
+          background: url(../images/iconsprite/circle-x.svg) no-repeat 0 0
+        & + button
+          margin-left: 10px
+        @media (any-hover: hover)
+          &:hover
+            background: $grey
+            border: 1px solid $bgc
+            color: $black
     &-btn button
       background: transparent
       border: none
@@ -38,31 +49,27 @@
       margin: 0
       + button
         margin-left: 10px
-    &-select
-      border: 1px solid $grey
-      padding: 8px 10px 7px
+    &-form
       margin-right: 35px
-      outline: none
-      font-size: 15px
-      line-height: 1.1
-    &-btngrid
-      height: 26px
-      width: 25px
-      opacity: 0.3
-      outline: none
-    &-btnline
-      opacity: 0.3
-      outline: none
+      // border-radius: 5px
     &-btn
       display: flex
       align-items: center
       &--active
         opacity: 1
+  &__btn-view
+    height: 25px
+    width: 25px
+    opacity: 1
+    outline: none
+    svg
+      width: 100%
+      height: 100%
   &__item
     margin-right: 0
     margin-bottom: 30px
-    width: 253px
-    transition: all 1.5s step-start
+    width: 250px
+    // transition: all 1.5s step-start
     &-left
       margin-right: 0px
       &--line
@@ -90,45 +97,6 @@
       &-title
         flex-basis: 100%
         text-align: left
-      &-code
-        display: none
-        position: relative
-        flex-shrink: 0
-        padding: 0 30px 0 0
-        margin-left: 30px
-        font-size: 18px
-        line-height: 36px
-        color: $black
-        transition: all 0.5s step-start
-        &::before
-          content: ""
-          position: absolute
-          height: 100%
-          top: 0
-          left: -30px
-          width: 2px
-          background-color: $text
-        &.show
-          display: inline-block
-      &-brend
-        display: none
-        position: relative
-        flex-shrink: 0
-        padding: 0 30px 0 0
-        margin-left: 30px
-        font-size: 18px
-        line-height: 36px
-        color: $black
-        &::before
-          content: ""
-          position: absolute
-          height: 100%
-          top: 0
-          left: -30px
-          width: 2px
-          background-color: $text
-        &.show
-          display: inline-block
       &-cart
         position: relative
         flex-shrink: 0
@@ -145,15 +113,139 @@
           background-color: $text
       &-button
         margin-left: 30px
+    // скрыть блоки на GRID
+    & .product__info,
+    //& .product__brand,
+    & .quantity
+      display: none
 
+  &__goods
+    // width: 100%
   &__inner
     display: flex
+    justify-content: space-between
     &-aside
-      min-width: 290px
-      margin-right: 30px
+      width: 290px
+      margin-right: 50px
+      flex-shrink: 0
     &-list
-      display: flex
-      justify-content: space-between
-      flex-wrap: wrap
+      display: grid
+      grid-template-columns: repeat(3, 250px)
+      gap: 30px
+      margin-bottom: 50px
+      &--search
+        grid-template-columns: repeat(4, 266px)
+      // grid-template-rows: repeat()
+      // justify-content: space-between
+      // flex-wrap: wrap
       & .catalog__wrapper
         margin-bottom: 30px
+
+  &__footer
+    display: flex
+    align-items: center
+    justify-content: space-between
+    & .woocommerce-result-count
+      font-size: 14px
+
+// ДЛЯ VIEW LIST STYLE --------------
+.catalog__inner._active,
+.up-sells.products
+  & .catalog__view-list
+    width: 100%
+  & .catalog__inner-list
+    display: flex
+    flex-direction: column
+    // align-items: flex-start
+  & .catalog__item
+    width: 100%
+    margin-bottom: 0
+  & .product__item
+    padding: 22px 30px
+    flex-direction: row
+    align-items: center
+    min-height: unset
+    height: auto
+    gap: 30px
+  & .product__labels
+    right: -1px
+    left: auto
+    top: 16px
+    align-items: flex-end
+    & span
+      border-radius: 5px 0 0 5px
+      &.featured
+        align-self: unset
+  & .product__img
+    width: 100px
+    // flex-shrink: 0
+    height: auto
+    margin-bottom: 0
+  & .product__grid-wrap
+    width: 100%
+  & .product__grid-name
+    display: flex
+    align-items: center
+    padding-bottom: 20px
+    border-bottom: 1px solid rgba($bl, 0.3)
+  & .product__brand
+    // display: none
+    // width: 0
+    margin-right: 20px
+    height: 22px
+    max-width: none
+    margin-bottom: 0
+  & .product__cart
+    margin-top: 20px
+  & .product__name
+    flex: auto
+  & .product__info
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    max-width: 130px
+    width: 100%
+    &-name
+      display: flex
+      // align-items: flex-end
+      justify-content: space-between
+      font-size: 14px
+      color: $black
+      &:not(:last-child)
+        margin-bottom: 4px
+    &-title
+      flex-grow: 1
+      overflow: hidden
+    &-value
+      font-weight: 500
+  & .quantity
+    display: flex
+    margin: unset
+    width: 100px
+    & .quantity-left, .quantity-right
+      width: 30px
+      z-index: 2
+    input
+      height: 30px
+      // width: 40px
+      position: relative
+      left: 29px
+      font-size: 16px
+  & .price
+    display: flex
+    align-items: flex-end
+    flex-direction: row
+    font-weight: 600
+    font-size: 22px
+    color: #354053
+    margin-left: 30%
+    del
+      font-weight: 300
+      font-size: 15px
+      color: #cccccc
+      margin-right: 5px
+    ins
+      text-decoration: none
+      line-height: 1
+  & .product__button
+    margin-left: auto

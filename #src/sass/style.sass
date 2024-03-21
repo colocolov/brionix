@@ -1,7 +1,12 @@
-// подключаем шрифты
-@import 'fonts'
+// доп модули sass
+@use 'sass:math'
+
 // подклчение сброса стилей
 @import 'reset'
+// подключение миксинов
+@import 'mixins'
+// подключаем шрифты
+@import 'fonts'
 // подключение переменных
 @import 'variables'
 // подключение баззовых настроек
@@ -9,6 +14,9 @@
 
 // подключение стилей верхнего меню
 @import 'blocks/navbar'
+@import 'blocks/top'
+@import 'blocks/menu-list'
+@import 'blocks/category-top'
 // стили верхних категорий и слайдер
 @import 'blocks/tophead'
 // стили категорий на главной
@@ -38,6 +46,7 @@
 @import 'blocks/catalog'
 // стили для фильтра
 @import 'blocks/filter'
+@import 'blocks/select'
 
 // стили для футера
 @import 'blocks/footer'

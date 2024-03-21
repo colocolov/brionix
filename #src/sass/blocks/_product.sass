@@ -4,28 +4,57 @@
     position: relative
     display: flex
     flex-direction: column
-    align-items: center
-    justify-content: flex-end
+    // align-items: center
+    // justify-content: flex-end
     width: 250px
-    height: 373px
-    margin-right: 20px
+    min-height: 373px
+    // margin-right: 20px
     padding: 20px
     border-radius: 5px
-    background-color: $grey
-    transition: all 0.5s ease-in
+    background-color: $bgc
+    border: 2px solid $grey
+    transition: filter 0.3s ease-in, border 0.3s ease-in
+    @media (any-hover: hover)
+      &:hover
+        filter: drop-shadow(3px 3px 10px rgba(50, 50, 50, 0.15))
+        color: $red
+        border: 2px solid $bgc
+        & .product__name
+          color: $red
+
+    & .price
+      display: flex
+      flex-direction: column
+      font-family: 'Montserrat'
+      font-weight: 500
+      font-size: 22px
+      color: #354053
+      transition: color 0.3s ease-in
+      del
+        font-weight: 300
+        font-size: 15px
+        color: #cccccc
+      ins
+        text-decoration: none
+
   &__labels
     position: absolute
-    top: 20px
-    left: 0
+    top: -1px
+    left: -1px
     display: flex
     flex-direction: column
     // align-self: auto
     span
       align-self: flex-start
       background-color: $red
-      padding: 2px 10px
-      border-radius: 0px 5px 5px 0px
+      padding: 6px 10px
+      border-radius: 5px 7px 7px 0px
       color: $bgc
+      font-size: 15px
+      &:not(:last-child)
+        margin-bottom: 7px
+      &.featured
+        background-color: $bl
   &__new
     // display: block
     background-color: $bl
@@ -35,26 +64,48 @@
     color: $bgc
   &__image
     width: 150px
+    height: 175px
     margin: 0 auto
     margin-bottom: 20px
-    transition: all 1s
-  &__img
-    width: 100%
+    flex-shrink: 0
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
+  &__grid-wrap
+    display: flex
+    flex-direction: column
     height: 100%
+  &__grid-name
+    flex: 1
+  &__brand
+    height: 40px
+    max-width: 80px
+    margin-bottom: 5px
+    img
+      object-fit: contain
+      height: 100%
+  &__name
+    flex: 1
+    transition: color 0.3s ease-in
   &__title
-    @extend %text-title
-    color: $black
-    text-align: center
     transition: all 0.3s
+    color: $black
+    text-align: left
+    font-family: 'Montserrat'
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+
   &__cart
     width: 100%
     display: flex
     justify-content: space-between
-    align-items: center
-    margin-top: 30px
+    align-items: flex-end
+    margin-top: 10px
   &__price
     @extend %text-title
-    font-size: 20px
+    font-size: 22px
     color: $bl
     display: flex
     flex-direction: column
