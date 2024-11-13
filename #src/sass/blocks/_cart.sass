@@ -10,8 +10,8 @@
   &__info
     width: 730px
   &__icon
-    width: 60px
-    height: 19px
+    width: 25px
+    height: 25px
   &__table
     thead
       padding-bottom: 20px
@@ -21,22 +21,22 @@
         border-style: none
       th
         position: relative
-        font-family: "MuseoSansCyrl-500"
+        //font-family: "MuseoSansCyrl-500"
         font-weight: 500
         font-size: 18px
         line-height: 24px
         text-align: center
         color: $black
         // border-bottom: none
-        padding: 10px 20px 25px
+        padding: 10px
         &:nth-child(n+4)
           &::before
-            position: absolute
             content: ''
-            // display: block
+            position: absolute
+            display: block
             top: 0
             left: 0
-            height: 40px
+            height: 100%
             width: 1px
             background-color: $table
     tbody
@@ -49,11 +49,12 @@
         // padding: 25px
         vertical-align: middle
         text-align: center
-        font-family: "MuseoSansCyrl-300"
-        font-weight: 300
+        font-family: "Montserrat"
+        font-weight: 500
         font-size: 16px
-        line-height: 22px
+        line-height: 18px
         color: $black
+        padding: 10px
         &:first-child
           padding: 0
         &:nth-child(n+4)
@@ -85,17 +86,19 @@
           border-radius: 2px
     &-footer
       border-top: 1px solid $table
-      display: flex
-      font-family: 'Raleway-Regular'
+      // display: flex
+      font-family: 'Raleway', sans-serif
       font-weight: 400
-      justify-content: space-between
+      // justify-content: space-between
       padding-top: 15px
-      font-size: 16px
+      // font-size: 16px
       color: $black
       a
         transition: color 0.3s
       &--shop
         font-size: 18px
+      td.text-end
+        padding-top: 20px
 
   &__total
     width: 380px
@@ -109,7 +112,7 @@
       margin-bottom: 20px
       padding: 5px 10px
       border-bottom: 1px solid rgba($bll, 0.8)
-      font-family: 'Montserrat-Medium', sans-serif
+      font-family: 'Montserrat', sans-serif
       font-weight: 700
       font-size: 18px
       line-height: 24px
@@ -118,7 +121,7 @@
       display: flex
       justify-content: space-between
       margin: 40px 5px
-      font-family: 'Montserrat-Medium', sans-serif
+      font-family: 'Montserrat', sans-serif
       font-weight: 700
       font-size: 24px
       line-height: 32px
@@ -139,12 +142,14 @@
       color: $bgc
       padding: 16px
       text-transform: uppercase
-      font-family: "Raleway-Medium"
-      font-weight: 500
+      font-family: "Raleway", sans-serif
+      font-weight: 700
       font-size: 18px
       line-height: 24px
       letter-spacing: 0.2px
       transition: background-color 0.3s
+      outline: none
+      border: 1px solid #ed2228
   &__update
     margin-top: 30px
     text-align: right
@@ -152,13 +157,17 @@
     &-btn
       background-color: $red
       border-radius: 5px
-      // width: 100%
       color: $bgc
       padding: 10px 20px
-    // text-transform: uppercase
-      font-family: "Raleway-Medium"
+      font-family: "Raleway", sans-serif
       font-weight: 300
       font-size: 18px
       line-height: 22px
       letter-spacing: 0.2px
-      transition: background-color 0.3s
+      border: 1px solid $red
+      transition: background-color 0.3s ease, border 0.3s
+      &:disabled
+        background-color: transparent
+        color: $bll
+        cursor: not-allowed
+

@@ -5,7 +5,7 @@
         <ul class="menu__list">
           <li class="menu__item"><a href="#">О нас</a></li>
           <li class="menu__item"><a href="catalog.html">Каталог</a></li>
-          <li class="menu__item"><a href="#">Новости</a></li>
+          <li class="menu__item current-menu-item"><a href="#">Новости</a></li>
           <li class="menu__item"><a href="#">Контакты</a></li>
         </ul>
       </nav>
@@ -26,7 +26,28 @@
       </div>
 
       <div class="navbar__auth">
-        <button class="btn btn--entry">Войти</button><button class="btn btn--registration">Регистрация</button>
+        <!-- <button class="btn btn--entry">Войти</button> -->
+        <!-- <a href="#" class="btn btn--registration">Регистрация</a> -->
+        <ul class="menu__list menu__dropdown btn btn--registration">
+          <li class="menu-item menu__item menu-item-has-children">
+
+            <a href="">Мой аккаунт</a>
+
+            <ul class="sub-menu">
+              <li class="menu-item menu__item">
+                <a href="">Мой кабинет</a>
+              </li>
+              <li class="menu-item menu__item">
+                <a href="">Мои заказы</a>
+              </li>
+              <li class="menu-item menu__item">
+                <a href="">Выйти</a>
+              </li>
+            </ul>
+
+          </li>
+        </ul>
+
       </div>
     </div>
     <!-- шапка -->

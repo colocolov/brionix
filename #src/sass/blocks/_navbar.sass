@@ -26,18 +26,18 @@
     li
       position: relative
       &::before
-        content: ''
-        position: absolute
-        width: 0%
-        height: 2px
-        bottom: -7px
-        background-color: $red
-        transition: all .3s ease-in
-      @media (any-hover: hover)
-        &:hover::before
-          width: 100%
-          right: auto
-          left: 0
+        content: none
+      //   position: absolute
+      //   width: 0%
+      //   height: 1px
+      //   bottom: -8px
+      //   background-color: $red
+      //   transition: all .3s ease-in
+      // @media (any-hover: hover)
+      //   &:hover::before
+      //     width: 100%
+      //     right: auto
+      //     left: 0
       &:first-child
         &::after
           position: absolute
@@ -46,10 +46,10 @@
           color: $black
 
   &__item
-    font-family: 'Raleway'
+    // font-family: 'Raleway'
     font-weight: 400
-    font-size: 13px
-    line-height: 26px
+    font-size: 16px
+    line-height: 30px
     color: $black
     a
       color: $black
@@ -57,3 +57,4 @@
       transition: all 0.3s ease
       &._active
         font-weight: 700
+        color: $red

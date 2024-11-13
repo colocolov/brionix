@@ -26,6 +26,8 @@ a
   display: flex
   flex-direction: column
   min-height: 100%
+  & .woocommerce
+    flex: 1 0 auto
 
 .main
   flex: 1 0 auto
@@ -52,7 +54,7 @@ a
   cursor: pointer
   outline: none
 .btn
-  font-family: 'Raleway'
+  font-family: 'Raleway', sans-serif
   font-weight: 500
   font-size: 16px
   line-height: 20px
@@ -79,10 +81,20 @@ a
       &:hover
         background-color: darken($bgc, 3)
   &--registration
+    display: inline-block
     border-radius: 0
-    font-family: 'Raleway'
-    font-weight: 400
     color: $bgc
+    position: relative
+    padding: 0 0 0 45px !important
+    &::before
+      content: ''
+      position: absolute
+      display: block
+      top: 10px
+      left: 15px
+      width: 20px
+      height: 20px
+      background: url("../images/icons/icons.svg#user") center / cover no-repeat
   &--tophead
     // border-radius: 5px
     margin-right: auto

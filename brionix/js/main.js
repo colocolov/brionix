@@ -168,7 +168,9 @@ if (quantityBlock) {
     //   }
     //   button.parent().parent().find('input').val(newVal);
     // });
-    $('.good-info__quantity button').on('click', function () {
+
+    // кастомные стрелки увел/умен кол-ва товара // Ур24 40:00
+    $('main.site-main').on('click', '.good-info__quantity button', function() {
       let btn = $(this);
       let inputQut = btn.parent().find('.good-info__input');
       let prevValue = +(inputQut.val());
@@ -181,6 +183,8 @@ if (quantityBlock) {
           newValue = prevValue - 1;
         }
       }
+      // для корзины чтобы были активны стрелки после Ajax // Ур24 34:00
+      $('.upd-cart-item').prop('disabled', false);
       inputQut.val(newValue);
     });
 
@@ -200,8 +204,6 @@ if (quantityBlock) {
         .addClass("characteristics__info_active");
     });
     // -----
-
-
 
     // скрытие/показ разделов в фильтре
     $(".filter__item-drop").on("click", function () {

@@ -44,11 +44,11 @@
 
 // media запросы
 @mixin mediaDesk
-  @media screen and (max-width: $desktop)
+  @media screen and (max-width: $pcw)
     @content
 
 @mixin mediaNotebook
-  @media screen and (max-width: $notebook)
+  @media screen and (max-width: $pc)
     @content
 
 @mixin mediaTablet
@@ -56,15 +56,15 @@
     @content
 
 @mixin mediaPhone
-  @media screen and (max-width: $phone)
+  @media screen and (max-width: $mobile)
     @content
 
 @mixin mediaPhoneMid
-  @media screen and (max-width: $phone-mid)
+  @media screen and (max-width: $mobileMid)
     @content
 
 @mixin mediaPhoneSm
-  @media screen and (max-width: $phone-small)
+  @media screen and (max-width: $mobileSmall)
     @content
 
 //REM

@@ -39,6 +39,7 @@ let { src, dest, task } = require("gulp"),
   cleancss = require("gulp-clean-css"),
   rename = require("gulp-rename"),
   imagemin = require("gulp-imagemin"),
+  sourcemaps = require("gulp-sourcemaps"),
   svgsprite = require("gulp-svg-sprite"),
   ttf2woff = require("gulp-ttf2woff"),
   ttf2woff2 = require("gulp-ttf2woff2"),
@@ -65,6 +66,7 @@ function html() {
 
 function css() {
   return src(path.src.css)
+    .pipe(sourcemaps.init())
     .pipe(
       scss({
         outputStyle: "expanded",
@@ -73,7 +75,7 @@ function css() {
     .pipe(mediagroup())
     .pipe(
       autoprefixer({
-        overrideBrowserslist: ["last 10 versions"],
+        overrideBrowserslist: ["last 2 versions"],
         grid: true,
         cascade: true,
       })
@@ -85,6 +87,7 @@ function css() {
         extname: ".min.css",
       })
     )
+    .pipe(sourcemaps.write())
     .pipe(dest(path.build.css))
     .pipe(browsersync.stream());
 }
@@ -96,6 +99,7 @@ function cssadd() {
 
 function js() {
   return src(path.src.js)
+    .pipe(sourcemaps.init())
     .pipe(fileinclude())
     .pipe(dest(path.build.js))
     //.pipe(uglify())
@@ -104,6 +108,7 @@ function js() {
         extname: ".min.js",
       })
     )
+    .pipe(sourcemaps.write('./'))
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream());
 }
